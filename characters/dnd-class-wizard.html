@@ -1,52 +1,223 @@
 <html>
     <head>
         <style>
-            .description, .attributes, .saves {
-                margin-bottom: 1em;
+            @font-face {
+                font-family: "Fira Sans";
+                src: url("fonts/FiraSans-Regular.ttf");
+                font-weight: normal; /* 400 */
             }
-            .border {
-                border-collapse: collapse;
+            @font-face {
+                font-family: "Fira Sans";
+                src: url("fonts/FiraSans-Italic.ttf");
+                font-weight: normal; /* 400 */
+                font-style: italic;
+            }
+            @font-face {
+                font-family: "Fira Sans";
+                src: url("fonts/FiraSans-Light.ttf");
+                font-weight: 200;
+            }
+            @font-face {
+                font-family: "Medieval Sharp";
+                src: url("fonts/MedievalSharp-Regular.ttf");
+                font-weight: normal;
+            }
+            @font-face {
+                font-family: "Shadows Into Light";
+                src: url("fonts/ShadowsIntoLight-Regular.ttf");
+            }
+            body {
+                font-family: "Fira Sans";
+                font-size: 0.8rem;
+            }
+            h1, h2, h3, p {
+                margin: 0;
+                padding: 0;
+            }
+            ul {
+                margin: 0;
+                list-style: none;
+                padding: 0;
+            }
+            .px-2 {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+            .mb-2 {
+                margin-bottom: 0.5rem;
+            }
+            .w-4 {
+                width: 1rem;
+            }     
+            .w-8 {
+                width: 2rem;
+            }
+            .w-16 {
+                width: 4rem;
+            }
+            .w-24 {
+                width: 6rem;
+            }
+            .w-3-5 {
+                width: 60%;
+            }
+            .w-4-5 {
+                width: 80%;
+            }
+            .flex {
+                display: flex;
+            }
+            .traits {
+                width: 20rem;
+            }
+            .description, .ability-scores, .saves, .skills, .proficiencies, .features, .equipment,
+            .spellcasting, .cantrips, .spellbook {
+                margin-bottom: 0.5rem;
+            }
+            .ch-table {
+                border-collapse: separate;
+                border-spacing: 0.5rem 0;
                 width: 100%;
             }
-            .border td {
-                border: solid 2px #888888;
+            .ch-table th {
+                margin-left: 0.5rem;
+                font-size: 0.64rem;
+                text-decoration: underline;
+                color: rgb(153, 153, 153);
             }
-            .attributes td {
+            .ability-scores th {
+                font-size: 0.8rem;
+                font-weight: normal;
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+            }
+            .ch-table td {
+                border-bottom: solid 1px rgb(201, 201, 201);
+                margin-left: 0.5rem;
                 text-align: center;
+                font-size: 0.8rem;
+            }
+            .ch-table .tl {
+                text-align: left;
+                padding-left: 0.5rem;
+            }
+            .ch-table td.nb {
+                border-bottom: solid 1px rgb(255, 255, 255);
+            }
+            .ch-section {
+                border: solid 2px rgb(153, 153, 153);
+                border-radius: 0.5rem;
+                padding: 0.5rem;
+                position: relative;
+            }
+            /* .ch-section .ch-section-title {
+                position: absolute;
+                top: -1rem;
+                left: 0.5rem;
+                padding: 0 0.5rem;
+                background: rgb(255, 255, 255);
+            } */
+            .ch-section-title {
+                text-align: center;
+                padding-bottom: 0.2em;
+                margin-bottom: 0.2em;
+                margin-top: -0.3em;
+                border-bottom: solid 1px rgb(0, 0, 0)
+            }
+            .ch-section-title h2, .ch-section-title h3 {
+                color: rgb(0, 0, 0);
+                display: inline-block;
+                font-size: 0.8rem;
+                text-transform: uppercase;
+            }
+            .ch-table-section td {
+                color: rgb(0, 0, 0);
+                font-size: 0.8rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                border-bottom: solid 1px rgb(0, 0, 0)
+            }
+            .ch-section .instruct {
+                color: rgb(153, 153, 153);
+                font-style: italic;
+            }
+            .alignment, .personality {
+                margin-left: 0.5rem;
+                margin-bottom: 0.5rem;
+            }
+            .alignment p {
+                margin-bottom: 0;
+            }
+            .dt {
+                font-weight: bold;
+                font-style: italic;
+            }
+            .alignment li {
+                display: flex;
+            }           
+            .alignment-category {
+                font-style: italic;
+                margin-left: auto;
+            }
+            .alignment p, .personality p, .proficiencies p, .features p, .equipment p {
+                margin-top: 0.5rem;
+            }
+            .bg-lt-grey {
+                background-color: rgb(238, 238, 238)
+            }
+            h1 {
+                text-align: right;
+                font-family: "Medieval Sharp";
+                font-weight: normal;
+            }
+
+            .page2-header {
+                text-align: right;
+                font-family: "Medieval Sharp";
+                font-weight: normal;
+            }
+
+            @media print {
+                @page {
+                    size: A4;
+                }
+
+                .page2-header {
+                    page-break-before: always;
+                }
             }
         </style>
     </head>
     <body>
-        <div class="description">
-            <h1>Class: Wizard (level 1)</h1>
-            <table class="border">
+        <h1>Class: Wizard (level 1)</h1>
+        <div class="description ch-section">
+            <table class="ch-table">
                 <tr>
-                    <td>Character Name</td>
-                    <td></td>
-                </tr>
-            </table>
-        </div>
-        <div class="combat">
-            <h2>Combat</h2>
-            <table class="border">
-                <tr>
-                    <th>Initiative</th>
-                    <th>Armor Class</th>
-                    <th>Hit Dice</th>
-                    <th>Hit Points</th>
+                    <th class="tl">Character Name</th>
+                    <th class="w-16">Initiative</th>
+                    <th class="w-16">Proficiency</th>
+                    <th class="w-16">Armor Class</th>
+                    <th class="w-16">Hit Dice</th>
+                    <th class="w-16">Hit Points</th>
                 </tr>
                 <tr>
+                    <td class="tl"></td>
                     <td>+1</td>
+                    <td>+2</td>
                     <td>11</td>
                     <td>1D6</td>
                     <td>8</td>
                 </tr>
             </table>
         </div>
-        <div class="attributes">
-            <h2>Attributes (already adjusted for background with customisation)</h2>
-            <table class="border">
+       <div class="ability-scores ch-section">
+            <div class="ch-section-title">
+                <h2>Ability Scores</h2>
+                <span class="instruct">(already adjusted for background with customisation)</span>
+            </div>
+            <table class="ch-table">
                 <tr>
+                    <th></th>
                     <th>Strength</th>
                     <th>Dexterity</th>
                     <th>Constitution</th>
@@ -55,6 +226,7 @@
                     <th>Charisma</th>
                 </tr>
                 <tr>
+                    <td class="tl nb">Score</td>
                     <td>8</td>
                     <td>12</td>
                     <td>14</td>
@@ -63,6 +235,7 @@
                     <td>10</td>
                 </tr>
                 <tr>
+                    <td class="tl nb">Modifier</td>
                     <td>-1</td>
                     <td>+1</td>
                     <td>+2</td>
@@ -72,150 +245,256 @@
                 </tr>
             </table>
         </div>
-        <div class="saves">
-            <h2>Saving throws</h2>
-            <table class="border">
+        <div class="flex">
+            <div class="ch-tests w-4-5">
+         <div class="saves ch-section">
+            <div class="ch-section-title">
+                <h2>Saving throws</h2>
+            </div>
+            <table class="ch-table">
                 <tr>
-                    <th>Prof.</th>
-                    <th>Saving Throw</th>
+                    <th class="tl w-8">Prof.</th>
+                    <th class="tl">Saving Throw</th>
                     <th></th>
                     <th>Attr</th>
                     <th>+ Prof</th>
                     <th>= Total</th>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td>Strength</td>
+                    <td class="nb"></td>
+                    <td class="tl">Strength</td>
                     <td>STR</td>
                     <td>-1</td>
                     <td></td>
                     <td>-1</td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td>Dexterity</td>
+                    <td class="nb"></td>
+                    <td class="tl">Dexterity</td>
                     <td>DEX</td>
                     <td>+1</td>
                     <td></td>
                     <td>+1</td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td>Constitution</td>
+                    <td class="nb"></td>
+                    <td class="tl">Constitution</td>
                     <td>CON</td>
                     <td>+2</td>
                     <td></td>
                     <td>+2</td>
                 </tr>
                 <tr>
-                    <td>⚫</td>
-                    <td>Intelligence</td>
+                    <td class="nb">⚫</td>
+                    <td class="tl">Intelligence</td>
                     <td>INT</td>
                     <td>+3</td>
                     <td>+2</td>
                     <td>+5</td>
                 </tr>
                 <tr>
-                    <td>⚫</td>
-                    <td>Wisdom</td>
+                    <td class="nb">⚫</td>
+                    <td class="tl">Wisdom</td>
                     <td>WIS</td>
                     <td>+2</td>
                     <td>+2</td>
                     <td>+4</td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td>Charisma</td>
+                    <td class="nb"></td>
+                    <td class="tl">Charisma</td>
                     <td>CHA</td>
                     <td>+0</td>
                     <td></td>
                     <td>+0</td>
                 </tr>
             </table>
-        </div>  
-        <div class="skills">
-            <h2>Skills (pick 2, and add proficiency (+2) to total</h2>
-            <table class="border">
+        </div>
+        <div class="skills ch-section">
+            <div class="ch-section-title">
+                <h2>Skills</h2>
+                <span class="instruct">(pick 2 and add proficiency +2 to total)</span>
+            </div>
+            <table class="ch-table">
                 <tr>
-                    <th>Prof.</th>
-                    <th>Skill</th>
+                    <th class="tl w-8">Prof.</th>
+                    <th class="tl">Skill</th>
                     <th>Attr.</th>
                     <th>Mod.</th>
                     <th>+ Prof</th>
                     <th>= Total</th>
                 </tr>
                 <tr>
-                    <td>◯</td>
-                    <td><b>Arcana</b></td>
+                    <td class="nb">◯</td>
+                    <td class="tl"><b>Arcana</b></td>
                     <td>INT</td>
                     <td>+3</td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td>◯</td>
-                    <td><b>History</b></td>
+                    <td class="nb">◯</td>
+                    <td class="tl"><b>History</b></td>
                     <td>INT</td>
                     <td>+3</td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td>◯</td>
-                    <td>Insight</td>
+                    <td class="nb">◯</td>
+                    <td class="tl">Insight</td>
                     <td>WIS</td>
                     <td>+2</td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td>◯</td>
-                    <td>Investigation</td>
+                    <td class="nb">◯</td>
+                    <td class="tl">Investigation</td>
                     <td>INT</td>
                     <td>+3</td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td>◯</td>
-                    <td>Medicine</td>
+                    <td class="nb">◯</td>
+                    <td class="tl">Medicine</td>
                     <td>WIS</td>
                     <td>+2</td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td>◯</td>
-                    <td>Nature</td>
+                    <td class="nb">◯</td>
+                    <td class="tl">Nature</td>
                     <td>INT</td>
                     <td>+3</td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td>◯</td>
-                    <td>Religion</td>
+                    <td class="nb">◯</td>
+                    <td class="tl">Religion</td>
                     <td>INT</td>
                     <td>+3</td>
                     <td></td>
                     <td></td>
                 </tr>
             </table>
-        </div>  
+        </div>
+        <div class="proficiencies ch-section">
+            <div class="ch-section-title">
+                <h2>Proficiencies</h2>
+            </div>
+            <p><span class="dt">Weapon Proficiencies:</span> Simple weapons</p>
+            <p><span class="dt">Armor Training:</span> None</p>
+        </div>
+            </div>
+            <div class="traits">
 
-        <div class="proficiencies">
-            <h2>Proficiencies</h2>
-            <p>Weapon Proficiencies: Simple weapons</p>
-            <p>Armor Training: None</p>
+                <div class="personality ch-section">
+                    <div class="ch-section-title">       
+                        <h2>Personality</h2>
+                    </div>
+                    <p>
+                        <span class="dt">Reputation:</span>
+                        <span class="instruct">(pick one)</span>
+                        Decisive — Logical — Informative — Curious
+                    </p>
+                    <p>
+                        <span class="dt">Trait:</span>
+                        <span class="instruct">(pick one)</span>
+                        Energetic — Hale — Hearty — Stable — Serene — Considerate — Attentive — Wary
+                    </p>
+                    <p>
+                        <span class="dt">Flaw:</span>
+                        <span class="instruct">(pick one)</span>
+                        Weak — Slight — Indirect — Self&#8209;conscious
+                    </p>
+                </div>
+                <div class="alignment ch-section">
+                    <div class="ch-section-title">       
+                        <h2>Alignment</h2>
+                    </div>
+                    <p>
+                        <span class="dt">Approach:</span>
+                        <span class="instruct">(pick one)</span>
+                    </p>
+                    <ul>
+                        <li>Cooperative — Loyal — Judgemental — Methodical — <span class="alignment-category">(Lawful)</span></li>
+                        <li class="bg-lt-grey">Selfish — Disinterested — Laconic — Pragmatic — <span class="alignment-category">(Neutral)</span></li>
+                        <li>Boastful — Impulsive — Rebellious — Self&#8209;absorbed <span class="alignment-category">(Chaotic)</span></li>
+                    </ul>
+                    <p>
+                        <span class="dt">Morality:</span>
+                        <span class="instruct">(pick one)</span>
+                    </p>
+                    <ul>
+                        <li>Compassionate — Helpful — Honest — Kind — <span class="alignment-category">(Good)</span></li>
+                        <li class="bg-lt-grey">Selfish — Disinterested — Laconic — Pragmatic <span class="alignment-category">(Neutral)</span></li>
+                    </ul>
+                </div>
+        
+            </div>
         </div>
-        <div class="features">
-            <h2>Class Features</h2>
-            <p><b>Ritual Adept:</b> You can use your spellbook to cast a Ritual spell without having it prepared.</p>
-            <p><b>Arcane Recovery:</b> Regain one level (half Wizard level rounded up) of spell slots (at the end of a Short Rest). Use once per Long Rest. ☐</p>
+        <div class="features ch-section">
+            <div class="ch-section-title">
+                <h2>Class Features</h2>
+            </div>
+            <p><span class="dt">Spellcasting:</span> Intelligence is your spellcasting ability. <b>Cantrips.</b> You know 3 Cantrips. You can replace once Cantrip after a long rest. <b>Spellbook.</b> Your spellbook contains 6 spells, of which you can prepare 4 each Long Rest.</p>
+            <p><span class="dt">Ritual Adept:</span> You can use your spellbook to cast a Ritual spell without having it prepared.</p>
+            <p><span class="dt">Arcane Recovery:</span> Regain one level (half Wizard level rounded up) of spell slots (at the end of a Short Rest). Use once per Long Rest. ☐</p>
         </div>
-        <div class="spells">
-            <h2>Spells</h2>
-            <table class="border">
+        <div class="equipment ch-section">
+            <div class="ch-section-title">
+                <h2>Equipment</h2>
+            </div>
+            <table class="ch-table">
+                <tr>
+                    <th class="tl">Weapon</th>
+                    <th></th>
+                    <th>Attack</th>
+                    <th class="tl">Damage</th>
+                    <th class="tl">Properties</th>
+                </tr>
+                <tr>
+                    <td class="tl">Dagger x2</td>
+                    <td>DEX</td>
+                    <td>+4</td>
+                    <td class="tl">1D4+2 piercing</td>
+                    <td class="tl">Finesse, Light, Thrown (range 20/60)</td>
+                </tr>
+                <tr>
+                    <td class="tl">Arcane Focus (Quarterstaff)</td>
+                    <td>STR</td>
+                    <td>+1</td>
+                    <td class="tl">1D6+1 bludgeoning</td>
+                    <td class="tl">Versatile (1D8)</td>
+                </tr>
+            </table>
+            <p>
+                <span class="dt">Other Equipment:</span> Robe, Spellbook, Backpack, Book, Ink, Ink Pen, Lamp, 10 flasks of Oil, 10 sheets of Parchment, Tinderbox
+            </p>
+            <p>
+                <span class="dt">Trinket:</span>
+                <span class="instruct">(pick one)</span>
+            </p>
+            <ul>
+                <li>◯ A gold coin minted in an unknown land (3)</li>
+                <li>◯ A pipe that blows bubbles (19)</li>
+                <li>◯ An eggshell painted with scenes of misery in disturbing detail (73)</li>
+                <li>◯ Empty wine bottle bearing a pretty label that says, “The Wizard of Wines Winery, Red Dragon Crush, 331422-W” (93)</li>
+            </ul>
+            <p>
+                <span class="dt">Money:</span> 5 GP
+            </p>
+        </div>
+
+        <div class="spells page2-header">
+            <h2>Wizard Spells</h2>
+        </div>
+        <div class="spellcasting ch-section">
+            <table class="ch-table">
                 <tr>
                     <th>Casting ability</th>
                     <th>Save DC</th>
@@ -229,305 +508,248 @@
                     <td>2</td>
                 </tr>
             </table>
-            <h3>Cantrips: (pick 3)</h3>
-            <table class="border">
+        </div>
+        <div class="cantrips ch-section">
+            <div class="ch-section-title">
+                <h3>Cantrips</h3>
+                <span class="instruct">(pick 3, may swap one after a Long Rest)</span>
+            </div>
+            <table class="ch-table">
                 <tr>
                     <th>Known</th>
                     <th>Level</th>
-                    <th>Spell</th>
+                    <th class="tl">Spell</th>
                     <th>Cast</th>
                     <th>Range</th>
                     <th>Components</th>
-                    <th>Notes</th>
+                    <th class="tl">Notes</th>
                 </tr>
                 <tr>
-                    <td>☐</td>
+                    <td class="nb">☐</td>
                     <td>Cantrip</td>
-                    <td><b>Fire Bolt</b></td>
+                    <td class="tl"><b>Fire Bolt</b></td>
                     <td>Action</td>
                     <td>120 ft</td>
                     <td>V, S</td>
-                    <td>Attack +5 for 1d10 fire. Set unattended items alight.</td>
+                    <td class="tl">Attack +5 for 1d10 fire. Set unattended items alight.</td>
                 </tr>
                 <tr>
-                    <td>☐</td>
+                    <td class="nb">☐</td>
                     <td>Cantrip</td>
-                    <td><b>Mage Hand</b></td>
+                    <td class="tl"><b>Mage Hand</b></td>
                     <td>Action</td>
                     <td>30 ft</td>
                     <td>V, S</td>
-                    <td>Spectral hand for 1 minute, can carry 10 lbs, move 30 ft as an action, must stay in range</td>
+                    <td class="tl">Spectral hand for 1 minute, can carry 10 lbs, move 30 ft as an action, must stay in range</td>
                 </tr>
                 <tr>
-                    <td>☐</td>
+                    <td class="nb">☐</td>
                     <td>Cantrip</td>
-                    <td><b>Acid Splash</b></td>
+                    <td class="tl"><b>Acid Splash</b></td>
                     <td>Action</td>
                     <td>60 ft</td>
                     <td>V, S</td>
-                    <td>5 ft radius. DEX save DC 13 for 1d6 acid.</td>
+                    <td class="tl">5 ft radius. DEX save DC 13 for 1d6 acid.</td>
                 </tr>
                 <tr>
-                    <td>☐</td>
+                    <td class="nb">☐</td>
                     <td>Cantrip</td>
-                    <td>Light</td>
+                    <td class="tl">Light</td>
                     <td>Action</td>
                     <td>Touch</td>
                     <td>V, M</td>
-                    <td>Sheds 20 ft bright plus 20 ft dim light. Lasts 1 hour.</td>
+                    <td class="tl">Sheds 20 ft bright plus 20 ft dim light. Lasts 1 hour.</td>
                 </tr>
                 <tr>
-                    <td>☐</td>
+                    <td class="nb">☐</td>
                     <td>Cantrip</td>
-                    <td>Minor Illusion</td>
+                    <td class="tl">Minor Illusion</td>
                     <td>Action</td>
                     <td>30 ft</td>
                     <td>S, M</td>
-                    <td>Image or sound (not both) in 5 ft cube, lasts 1 minute.</td>
+                    <td class="tl">Image or sound (not both) in 5 ft cube, lasts 1 minute.</td>
                 </tr>
                 <tr>
-                    <td>☐</td>
+                    <td class="nb">☐</td>
                     <td>Cantrip</td>
-                    <td>Prestidigitation</td>
+                    <td class="tl">Prestidigitation</td>
                     <td>Action</td>
                     <td>10 ft</td>
                     <td>V, S</td>
-                    <td>Minor sensory effect, light/extinguish campfire, clean/soil 5 ft, or magic mark for 1 hour.</td>
+                    <td class="tl">Minor sensory effect, light/extinguish campfire, clean/soil 5 ft, or magic mark for 1 hour.</td>
                 </tr>
                 <tr>
-                    <td>☐</td>
+                    <td class="nb">☐</td>
                     <td>Cantrip</td>
-                    <td>Ray of Frost</td>
+                    <td class="tl">Ray of Frost</td>
                     <td>Action</td>
                     <td>60 ft</td>
                     <td>V, S</td>
-                    <td>Attack +5 for 1d8 cold. On a hit reduce speed by 10 ft.</td>
+                    <td class="tl">Attack +5 for 1d8 cold. On a hit reduce speed by 10 ft.</td>
                 </tr>
             </table>
-            <h3>Spellbook: (suggest pick 4)</h3>
-            <table class="border">
+        </div>
+        <div class="spellbook ch-section">
+            <div class="ch-section-title">
+                <h3>Spellbook</h3>
+                <span class="instruct">(add 4 spells to your book and prepare them, then add 2 more rituals (or other) to your book)</span>
+            </div>
+            <table class="ch-table">
                 <tr>
                     <th>Book</th>
                     <th>Prepared</th>
                     <th>Level</th>
-                    <th>Spell</th>
+                    <th class="tl">Spell</th>
                     <th>Cast</th>
                     <th>Range</th>
                     <th>Components</th>
-                    <th>Notes</th>
+                    <th class="tl">Notes</th>
                 </tr>
                 <tr>
-                    <td>☐</td>
-                    <td>☐</td>
+                    <td class="nb">◯</td>
+                    <td class="nb">☐</td>
                     <td>1</td>
-                    <td><b>Burning Hands</b></td>
+                    <td class="tl"><b>Burning Hands</b></td>
                     <td>Action</td>
                     <td>Self</td>
                     <td>V, S</td>
-                    <td>15 ft cone. 3d6 fire damage. DEX save DC 13 for half damage. Set unattended items alight.</td>
+                    <td class="tl">15 ft cone. 3d6 fire damage. DEX save DC 13 for half damage. Set unattended items alight.</td>
                 </tr>
                 <tr>
-                    <td>☐</td>
+                    <td>◯</td>
                     <td>☐</td>
                     <td>1</td>
-                    <td><b>Mage Armor</b></td>
+                    <td class="tl"><b>Sleep</b></td>
+                    <td>Action</td>
+                    <td>60 ft</td>
+                    <td>V, S, M</td>
+                    <td class="tl">5 ft radius sphere. WIS save DC 13 or be Incapacitated (can not take actions, but can move), then repeat save next turn or be Unconscious.</td>
+                </tr>
+                <tr>
+                    <td>◯</td>
+                    <td>☐</td>
+                    <td>1</td>
+                    <td class="tl"><b>Mage Armor</b></td>
                     <td>Action</td>
                     <td>Touch</td>
                     <td>V, S, M</td>
-                    <td>Last 8 hours. Target who isn't wearing armour gets AC 13 + DEX mod.</td>
+                    <td class="tl">Last 8 hours. Target who isn't wearing armour gets AC 13 + DEX mod.</td>
                 </tr>
                 <tr>
-                    <td>☐</td>
+                    <td>◯</td>
                     <td>☐</td>
                     <td>1</td>
-                    <td><b>Magic Missile</b></td>
+                    <td class="tl"><b>Magic Missile</b></td>
                     <td>Action</td>
                     <td>120 ft</td>
                     <td>V, S</td>
-                    <td>Creates three darts that automatically hit for 1D4+1 force damage each.</td>
+                    <td class="tl">Creates three darts that automatically hit for 1D4+1 force damage each.</td>
                 </tr>
                 <tr>
-                    <td>☐</td>
-                    <td>☐</td>
-                    <td>1</td>
-                    <td><b>Sleep</b></td>
-                    <td>Action</td>
-                    <td>60 ft</td>
-                    <td>V, S, M</td>
-                    <td>5 ft radius sphere. WIS save DC 13 or be Incapacitated (can not take actions, but can move), then repeat save next turn or be Unconscious.</td>
-                </tr>
-                <tr>
-                    <td>☐</td>
+                    <td>◯</td>
                     <td>☐</td>
                     <td>1</td>
-                    <td>Charm Person</td>
+                    <td class="tl">Charm Person</td>
                     <td>Action</td>
                     <td>30 ft</td>
                     <td>V, S</td>
-                    <td>WIS save DC 13 (advantage if fighting) or Charmed. Lasts 1 hour. When the spell ends they know they were charmed.</td>
+                    <td class="tl">WIS save DC 13 (advantage if fighting) or Charmed. Lasts 1 hour. When the spell ends they know they were charmed.</td>
                 </tr>
                 <tr>
-                    <td>☐</td>
+                    <td>◯</td>
                     <td>☐</td>
                     <td>1</td>
-                    <td>Feather Fall</td>
+                    <td class="tl">Feather Fall</td>
                     <td>Reaction</td>
                     <td>60 ft</td>
                     <td>V, M</td>
-                    <td>Up to 5 falling creatures slow descent to 60 ft per round. Lasts 1 minute.</td>
+                    <td class="tl">Up to 5 falling creatures slow descent to 60 ft per round. Lasts 1 minute.</td>
                 </tr>
                 <tr>
-                    <td>☐</td>
+                    <td>◯</td>
                     <td>☐</td>
                     <td>1</td>
-                    <td>Grease</td>
+                    <td class="tl">Grease</td>
                     <td>Action</td>
                     <td>60 ft</td>
                     <td>V, S, M</td>
-                    <td>10 ft square of non-flamable grease. Must make DEX save DC 13 or fall Prone. Must save again if enter or end turn there.</td>
+                    <td class="tl">10 ft square of non-flamable grease. Must make DEX save DC 13 or fall Prone. Must save again if enter or end turn there.</td>
                 </tr>
                 <tr>
-                    <td>☐</td>
+                    <td>◯</td>
                     <td>☐</td>
                     <td>1</td>
-                    <td>Jump</td>
+                    <td class="tl">Jump</td>
                     <td>Bonus Action</td>
                     <td>Touch</td>
                     <td>V, S, M</td>
-                    <td>Lasts 1 minute. Target can jump 30 ft by spending 10 ft of movement.</td>
+                    <td class="tl">Lasts 1 minute. Target can jump 30 ft by spending 10 ft of movement.</td>
                 </tr>
                 <tr>
-                    <td>☐</td>
+                    <td>◯</td>
                     <td>☐</td>
                     <td>1</td>
-                    <td>Silent Image</td>
+                    <td class="tl">Silent Image</td>
                     <td>Action</td>
                     <td>60 ft</td>
                     <td>V, S, M</td>
-                    <td>Concentration. 15 ft cube. As an action move to any spot within range.</td>
+                    <td class="tl">Concentration. 15 ft cube. As an action move to any spot within range.</td>
                 </tr>
                 <tr>
-                    <td>☐</td>
+                    <td>◯</td>
                     <td>☐</td>
                     <td>1</td>
-                    <td>Thunderwave</td>
+                    <td class="tl">Thunderwave</td>
                     <td>Action</td>
                     <td>Self</td>
                     <td>V, S</td>
-                    <td>15 ft cube. 2d8 thunder damage and push 10 ft. CON save DC 13 for half damage and no push. Can be heard 300 ft away.</td>
+                    <td class="tl">15 ft cube. 2d8 thunder damage and push 10 ft. CON save DC 13 for half damage and no push. Can be heard 300 ft away.</td>
                 </tr>
-            </table>
-            <h3>Spellbook Rituals: (suggest pick 2)</h3>
-            <table class="border">
-                <tr>
-                    <th>Book</th>
-                    <th>Prepared</th>
-                    <th>Level</th>
-                    <th>Spell</th>
-                    <th>Cast</th>
-                    <th>Range</th>
-                    <th>Components</th>
-                    <th>Notes</th>
+                <tr class="ch-table-section">
+                    <td colspan="8">Rituals</td>
                 </tr>
                 <tr>
-                    <td>☐</td>
+                    <td>◯</td>
                     <td>☐</td>
                     <td>1</td>
-                    <td><b>Comprehend Languages</b></td>
+                    <td class="tl"><b>Detect Magic</b></td>
+                    <td>Action</td>
+                    <td>Self</td>
+                    <td>V, S</td>
+                    <td class="tl">Ritual. Concentration. Detect magic within 30 ft for 10 minutes.</td>
+                </tr>
+                <tr>
+                    <td>◯</td>
+                    <td>☐</td>
+                    <td>1</td>
+                    <td class="tl"><b>Comprehend Languages</b></td>
                     <td>Action</td>
                     <td>Self</td>
                     <td>V, S, M</td>
-                    <td>Ritual. Lasts 1 hour. Understand any spoken (or signed) language, or writing you touch.</td>
+                    <td class="tl">Ritual. Lasts 1 hour. Understand any spoken (or signed) language, or writing you touch.</td>
                 </tr>
                 <tr>
-                    <td>☐</td>
-                    <td>☐</td>
-                    <td>1</td>
-                    <td><b>Detect Magic</b></td>
-                    <td>Action</td>
-                    <td>Self</td>
-                    <td>V, S</td>
-                    <td>Ritual. Concentration. Detect magic within 30 ft for 10 minutes.</td>
-                </tr>
-                <tr>
-                    <td>☐</td>
+                    <td>◯</td>
                     <td>☐</td>
                     <td>1</td>
-                    <td>Alarm</td>
+                    <td class="tl">Alarm</td>
                     <td>1 Minute</td>
                     <td>30 ft</td>
                     <td>V, S, M</td>
-                    <td>Ritual. 20 ft cube area. Lasts 8 hours. Alarm (choose audible or mental) when a foreign creature touches the area.</td>
+                    <td class="tl">Ritual. 20 ft cube area. Lasts 8 hours. Alarm (choose audible or mental) when a foreign creature touches the area.</td>
                 </tr>
                 <tr>
-                    <td>☐</td>
+                    <td>◯</td>
                     <td>☐</td>
                     <td>1</td>
-                    <td>Unseen Servant</td>
+                    <td class="tl">Unseen Servant</td>
                     <td>Action</td>
                     <td>60 ft</td>
                     <td>V, S, M</td>
-                    <td>Ritual. Lasts 1 hour. Conjures and invisible, mindless, Medium force. Bonus Action to command it to perform simple tasks (fetching, mending, cleaning, etc). Can't attack. Can't go beyond range.</td>
+                    <td class="tl">Ritual. Lasts 1 hour. Conjures and invisible, mindless, Medium force. Bonus Action to command it to perform simple tasks (fetching, mending, cleaning, etc). Can't attack. Can't go beyond range.</td>
                 </tr>
             </table>
-        </div>
-        <div class="equipment">
-            <h2>Equipment</h2>
-            <table class="border">
-                <tr>
-                    <th>Weapon</th>
-                    <th></th>
-                    <th>Attack</th>
-                    <th>Damage</th>
-                    <th>Properties</th>
-                </tr>
-                <tr>
-                    <td>Dagger x2</td>
-                    <td>DEX</td>
-                    <td>+4</td>
-                    <td>1D4+2 piercing</td>
-                    <td>Finesse, Light, Thrown (range 20/60)</td>
-                </tr>
-                <tr>
-                    <td>Arcane Focus (Quarterstaff)</td>
-                    <td>STR</td>
-                    <td>+1</td>
-                    <td>1D6+1 bludgeoning</td>
-                    <td>Versatile (1D8)</td>
-                </tr>
-            </table>
-            <p>
-                Other Equipment: Robe, Spellbook, Backpack, Book, Ink, Ink Pen, Lamp, 10 flasks of Oil, 10 sheets of Parchment, Tinderbox
-            </p>
-            <p>
-                Trinket: (pick one)
-            </p>
-            <ul>
-                <li>◯ A gold coin minted in an unknown land (3)</li>
-                <li>◯ A pipe that blows bubbles (19)</li>
-                <li>◯ An eggshell painted with scenes of misery in disturbing detail (73)</li>
-                <li>◯ An empty wine bottle bearing a pretty label that says, “The Wizard of Wines Winery, Red Dragon Crush, 331422-W” (93)</li>
-            </ul>
-            <p>
-                Money: 5 GP
-            </p>
         </div>
 
-        <h2>Alignment</h2>
-        <p>Approach: (pick one)</p>
-        <ul>
-            <li>Cooperative - Loyal - Judgemental - Methodical (Lawful)</li>
-            <li>Selfish - Disinterested - Laconic - Pragmatic (Neutral)</li>
-            <li>Boastful - Impulseive - Rebellious - Self-absorbed (Chaotic)</li>
-        </ul>
-        <p>Morality: (pick one)</p>
-        <ul>
-            <li>Compassionate - Helpful - Honest - Kind (Good)</li>
-            <li>Selfish - Disinterested - Laconic - Pragmatic (Neutral)</li>
-        </ul>
-        <h2>Personality</h2>
-        <p>Reputation: (pick one) Decisive - Logical - Informative - Curious</p>
-        <p>Trait: (pick one) Energetic - Hale - Hearty - Stable - Serene - Considerate - Attentive - Wary</p>
-        <p>Flaw: (pick one) Weak - Slight - Self-conscious - Indirect</p>
     </body>
 </html>

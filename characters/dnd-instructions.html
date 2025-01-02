@@ -1,0 +1,587 @@
+<html>
+    <head>
+        <style>
+@font-face {
+    font-family: "Fira Sans";
+    src: url("fonts/FiraSans-Regular.ttf");
+    font-weight: normal; /* 400 */
+}
+@font-face {
+    font-family: "Fira Sans";
+    src: url("fonts/FiraSans-Italic.ttf");
+    font-weight: normal; /* 400 */
+    font-style: italic;
+}
+@font-face {
+    font-family: "Fira Sans";
+    src: url("fonts/FiraSans-Light.ttf");
+    font-weight: 200;
+}
+@font-face {
+    font-family: "Medieval Sharp";
+    src: url("fonts/MedievalSharp-Regular.ttf");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Shadows Into Light";
+    src: url("fonts/ShadowsIntoLight-Regular.ttf");
+}
+body, p, th, td {
+    font-family: "Fira Sans";
+    font-size: 0.75rem;
+}
+h1 {
+    /* text-align: right; */
+    font-family: "Medieval Sharp";
+    font-weight: normal;
+}
+.name-table {
+    border-collapse: collapse;
+    width: 14rem;
+    margin-bottom: 0.5rem;
+}
+.name-table th {
+    border: solid 1px rgb(201, 201, 201);
+    padding: 0.1rem 0.2rem;
+    text-align: left;
+}
+.name-table td {
+    border: solid 1px rgb(201, 201, 201);
+    padding: 0.1rem 0.5rem;
+}
+.c {
+    text-align: center;
+}
+.bold {
+    font-weight: bold;
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.license-footer {
+    font-size: 0.6rem;
+}
+
+.licence-print {
+    display: none;
+}
+
+.licence-web {
+    display: block;
+}
+
+@media print {
+    @page {
+        size: A4;
+    }
+
+    .page2-header {
+        page-break-before: always;
+    }
+
+    .license-footer {
+        display: block;
+        margin-top: 2em;
+    }
+
+    .license-footer .cc-logo {
+        float: left;
+        margin-top: 0;
+        margin-right: 1em;
+        margin-bottom: 1em;
+    }
+
+    .licence-web {
+        display: none;
+    }
+    
+    .licence-print {
+        display: block;
+    }
+}
+
+        </style>
+    </head>
+    <body>
+        <h1>Dungeons &amp; Dragons Customisable Pre-Generated Characters</h1>
+
+        <div class="intro-main">
+            <p>
+                Creating a Dungeons &amp; Dragons character can be a time consuming process, with dozens of decisions and hundreds of options to choose from.
+            </p>
+            <p>
+                For a quick start pre-generated characters are available, where all options have already been chosen.
+            </p>
+            <p>
+                These sheets provide a middle path, with a set of modular pre-generated characters, where players have an opportunity for customisation without being overwhelemed by choice.
+            </p>
+
+            <h2>Instructions</h2>
+
+            <ol>
+                <li>
+                    Pick one Species sheet, one Background sheet, one Class sheet (some spell casters may have an extra sheet).
+                </li>
+                <li>
+                    Pick any options needed on your Species and Background sheets (many don't have any options).
+                </li>
+                <li>
+                    Copy in the Ability Score modifiers into the Skills on your Background and calculate the totals (adding +2 proficiency). 
+                </li>
+                <li>
+                    Calculate your attack total for any weapons from your Background, adding the listed ability modifier plus, if you are proficient, add +2.
+                </li>
+                <li>
+                    On your Class sheet, pick your Skills and calculate the totals (adding modifier +2 proficiency).
+                </li>
+                <li>
+                    Pick your Personality and Alignment traits as a guide for how to portray your character. The approach and morality you pick determine your alignment.
+                </li>
+                <li>
+                    Select any Class Features that have options.
+                </li>
+                <li>
+                    Adjust any totals as necessary, e.g. if your background, species, or features change any values.
+                </li>
+                <li>
+                    Name your character, and you are ready to go.
+                </li>
+            </ol>
+
+            <h2>Names</h2>
+
+            <div class="flex">
+                <div>
+                    <table class="name-table">
+                        <tr>
+                            <th>1D12</th>
+                            <th>Common Given Names</th>
+                            <th>Common Surname</th>
+                        </tr>
+                        <tr>
+                            <td class="c bold">1</td>
+                            <td>Alen</td>
+                            <td>Ashford</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">2</td>
+                            <td>Bek</td>
+                            <td>Brightwood</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">3</td>
+                            <td>Cora</td>
+                            <td>Crestfall</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">4</td>
+                            <td>Doran</td>
+                            <td>Daleson</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">5</td>
+                            <td>Esra</td>
+                            <td>Emberton</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">6</td>
+                            <td>Freya</td>
+                            <td>Greywell</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">7</td>
+                            <td>Gareth</td>
+                            <td>Hallowell</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">8</td>
+                            <td>Hanna</td>
+                            <td>Oakenshield</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">9</td>
+                            <td>Joran</td>
+                            <td>Redbrook</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">10</td>
+                            <td>Lena</td>
+                            <td>Stonebridge</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">11</td>
+                            <td>Mira</td>
+                            <td>Swiftwind</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">12</td>
+                            <td>Rowan</td>
+                            <td>Thornfield</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <table class="name-table">
+                        <tr>
+                            <th>1D12</th>
+                            <th>Guttural Given Names</th>
+                            <th>Guttural Surname</th>
+                        </tr>
+                        <tr>
+                            <td class="c bold">1</td>
+                            <td>Dorgash</td>
+                            <td>Drollgash</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">2</td>
+                            <td>Draughr</td>
+                            <td>Durshnak</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">3</td>
+                            <td>Ghorzul</td>
+                            <td>Ghornath</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">4</td>
+                            <td>Gorash</td>
+                            <td>Gravark</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">5</td>
+                            <td>Kraghor</td>
+                            <td>Hrothkur</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">6</td>
+                            <td>Kuzgath</td>
+                            <td>Kludrann</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">7</td>
+                            <td>Molgar</td>
+                            <td>Krukzal</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">8</td>
+                            <td>Rugmol</td>
+                            <td>Thrulgar</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">9</td>
+                            <td>Thruk</td>
+                            <td>Uldorg</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">10</td>
+                            <td>Ulmauk</td>
+                            <td>Vorghuun</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">11</td>
+                            <td>Vorzak</td>
+                            <td>Zagthul</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">12</td>
+                            <td>Zrug</td>
+                            <td>Zordrath</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <table class="name-table">
+                        <tr>
+                            <th>1D12</th>
+                            <th>Lyrical Given Names</th>
+                            <th>Lyrical Surname</th>
+                        </tr>
+                        <tr>
+                            <td class="c bold">1</td>
+                            <td>Aeloria</td>
+                            <td>Amaranthine</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">2</td>
+                            <td>Aveline</td>
+                            <td>Caleryn</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">3</td>
+                            <td>Calanthia</td>
+                            <td>Dawnwhisper</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">4</td>
+                            <td>Celiriene</td>
+                            <td>Eversong</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">5</td>
+                            <td>Elysira</td>
+                            <td>Ithamir</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">6</td>
+                            <td>Ilastria</td>
+                            <td>Laurelen</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">7</td>
+                            <td>Isarine</td>
+                            <td>Maradhel</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">8</td>
+                            <td>Maralune</td>
+                            <td>Moonvale</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">9</td>
+                            <td>Naelora</td>
+                            <td>Silvareon</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">10</td>
+                            <td>Seraphina</td>
+                            <td>Starbloom</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">11</td>
+                            <td>Syvalia</td>
+                            <td>Valeronde</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">12</td>
+                            <td>Varielle</td>
+                            <td>Wintermere</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <table class="name-table">
+                        <tr>
+                            <th>1D12</th>
+                            <th>Monosyllabic Given Names</th>
+                            <th>Monosyllabic Surname</th>
+                        </tr>
+                        <tr>
+                            <td class="c bold">1</td>
+                            <td>Ash</td>
+                            <td>Black</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">2</td>
+                            <td>Bane</td>
+                            <td>Blade</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">3</td>
+                            <td>Bran</td>
+                            <td>Bluff</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">4</td>
+                            <td>Flint</td>
+                            <td>Crow</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">5</td>
+                            <td>Frost</td>
+                            <td>Drake</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">6</td>
+                            <td>Gage</td>
+                            <td>Hale</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">7</td>
+                            <td>Grey</td>
+                            <td>Holt</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">8</td>
+                            <td>Lark</td>
+                            <td>Locke</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">9</td>
+                            <td>Rayne</td>
+                            <td>Morne</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">10</td>
+                            <td>Rook</td>
+                            <td>Storm</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">11</td>
+                            <td>Skye</td>
+                            <td>Wolfe</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">12</td>
+                            <td>Thorn</td>
+                            <td>Wraith</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <table class="name-table">
+                        <tr>
+                            <th>1D12</th>
+                            <th>Sinister Given Names</th>
+                            <th>Sinister Surname</th>
+                        </tr>
+                        <tr>
+                            <td class="c bold">1</td>
+                            <td>Arkhon</td>
+                            <td>Blackcross</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">2</td>
+                            <td>Azrael</td>
+                            <td>Brimlock</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">3</td>
+                            <td>Caligor</td>
+                            <td>Craventh</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">4</td>
+                            <td>Daemon</td>
+                            <td>Darkfall</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">5</td>
+                            <td>Kharon</td>
+                            <td>Ebonshard</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">6</td>
+                            <td>Malchus</td>
+                            <td>Fellgrave</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">7</td>
+                            <td>Nekros</td>
+                            <td>Gravesorrow</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">8</td>
+                            <td>Radu</td>
+                            <td>Mournwrath</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">9</td>
+                            <td>Salthus</td>
+                            <td>Nightbane</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">10</td>
+                            <td>Temnos</td>
+                            <td>Shadowthorn</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">11</td>
+                            <td>Vorlash</td>
+                            <td>Voidclaw</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">12</td>
+                            <td>Varielle</td>
+                            <td>Wraithborne</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <table class="name-table">
+                        <tr>
+                            <th>1D12</th>
+                            <th>Whimsical Given Names</th>
+                            <th>Whimsical Surname</th>
+                        </tr>
+                        <tr>
+                            <td class="c bold">1</td>
+                            <td>Alora</td>
+                            <td>Appleblossom</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">2</td>
+                            <td>Bellabee</td>
+                            <td>Brightwind</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">3</td>
+                            <td>Clover</td>
+                            <td>Daisywhisper</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">4</td>
+                            <td>Dreampoppy</td>
+                            <td>Dewdrop</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">5</td>
+                            <td>Edelia</td>
+                            <td>Feathertwine</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">6</td>
+                            <td>Fizzabelle</td>
+                            <td>Glitterdusk</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">7</td>
+                            <td>Honeydew</td>
+                            <td>Moonberry</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">8</td>
+                            <td>Lunetta</td>
+                            <td>Petalbreeze</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">9</td>
+                            <td>Marigold</td>
+                            <td>Raindance</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">10</td>
+                            <td>Petaloo</td>
+                            <td>Rosewater</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">11</td>
+                            <td>Sunblossom</td>
+                            <td>Starpetal</td>
+                        </tr>
+                        <tr>
+                            <td class="c bold">12</td>
+                            <td>Twilla</td>
+                            <td>Windwhisper</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="license-footer licence-web licence-print">
+            <p class="cc-logo"><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img
+                  alt="Creative Commons License" style="border-width:0"
+                  src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a></p>
+            <p>© Sly Gryphon, version 2025.01.02. This work is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International
+                License</a>.</p>
+            </p>
+        </div>
+
+    </body>
+</html>

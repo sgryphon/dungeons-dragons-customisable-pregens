@@ -25,7 +25,7 @@
 }
 body {
     font-family: "Fira Sans";
-    font-size: 0.75rem;
+    font-size: 0.7rem;
 }
 h1, h2, h3, p {
     margin: 0;
@@ -35,28 +35,6 @@ ul {
     margin: 0;
     list-style: none;
     padding: 0;
-}
-.px-2 {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-}
-.pb-1 {
-    padding-bottom: 0.25rem;
-}
-.pt-2 {
-    padding-top: 0.5rem;
-}
-.mt-1 {
-    margin-top: 0.25rem;
-}
-.mt-2 {
-    margin-top: 0.5rem;
-}
-.mb-2 {
-    margin-bottom: 0.5rem;
-}
-.mr-2 {
-    margin-right: 0.5rem;
 }
 .w-4 {
     width: 1rem;
@@ -84,11 +62,11 @@ ul {
 }
 .select-section h3 {
     font-weight: normal;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     text-decoration: underline;
 }
 .traits {
-    width: 17rem;
+    width: 16rem;
 }
 .description, .ability-scores, .saves, .skills, .proficiencies, .features, .equipment,
 .spellcasting, .cantrips, .spellbook, .lineage {
@@ -106,7 +84,7 @@ ul {
     color: rgb(153, 153, 153);
 }
 .ability-scores th, .saves th {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: normal;
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -115,7 +93,7 @@ ul {
     border-bottom: solid 1px rgb(201, 201, 201);
     margin-left: 0.5rem;
     text-align: center;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
 }
 .ch-table .tl {
     text-align: left;
@@ -147,12 +125,12 @@ ul {
 .ch-section-title h2, .ch-section-title h3 {
     color: rgb(0, 0, 0);
     display: inline-block;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
 }
 .ch-table-section td {
     color: rgb(0, 0, 0);
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: bold;
     text-transform: uppercase;
     border-bottom: solid 1px rgb(0, 0, 0);
@@ -190,6 +168,35 @@ h1 {
     text-align: right;
     font-family: "Medieval Sharp";
     font-weight: normal;
+}
+
+.px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.pb-0 {
+    padding-bottom: 0;
+}
+.pb-1 {
+    padding-bottom: 0.25rem;
+}
+.pt-2 {
+    padding-top: 0.5rem;
+}
+.mt-1 {
+    margin-top: 0.25rem;
+}
+.mt-2 {
+    margin-top: 0.5rem;
+}
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+.mr-2 {
+    margin-right: 0.5rem;
+}
+.mr-4 {
+    margin-right: 1rem;
 }
 
 .page2-header {

@@ -1,50 +1,38 @@
 <html>
     <head>
-        <style>
-            .description, .attributes, .saves {
-                margin-bottom: 1em;
-            }
-            .border {
-                border-collapse: collapse;
-                width: 100%;
-            }
-            .border td {
-                border: solid 2px #888888;
-            }
-            .attributes td {
-                text-align: center;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="styles-dnd.css" />
     </head>
     <body>
-        <div class="description">
-            <h1>Background: Criminal</h1>
-        </div>
-        <div class="skills">
-            <h2>Skills (add your attribute modifier plus proficiency)</h2>
-            <table class="border">
+        <h1>Background: Criminal</h1>
+
+        <div class="skills ch-section">
+            <div class="ch-section-title">
+                <h2>Skills</h2>
+                <span class="instruct">(add your ability modifier plus proficiency +2)</span>
+            </div>
+            <table class="ch-table">
                 <tr>
-                    <th>Prof.</th>
-                    <th>Expert</th>
-                    <th>Skill</th>
+                    <th class="tl w-8">Prof.</th>
+                    <th class="w-8">Expert</th>
+                    <th class="tl">Skill</th>
                     <th>Attr.</th>
                     <th>Mod.</th>
                     <th>+ Prof</th>
                     <th>= Total</th>
                 </tr>
                 <tr>
-                    <td>⚫</td>
-                    <td>◯</td>
-                    <td>Sleight of Hand</td>
+                    <td class="nb">⚫</td>
+                    <td class="nb">◯</td>
+                    <td class="tl">Sleight of Hand</td>
                     <td>DEX</td>
                     <td></td>
                     <td>+2</td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td>⚫</td>
-                    <td>◯</td>
-                    <td>Stealth</td>
+                    <td class="nb">⚫</td>
+                    <td class="nb">◯</td>
+                    <td class="tl">Stealth</td>
                     <td>DEX</td>
                     <td></td>
                     <td>+2</td>
@@ -53,42 +41,60 @@
             </table>
         </div>  
 
-        <div class="proficiencies">
-            <h2>Proficiencies</h2>
-            <p>Tool Proficiency: Thieves' Tools</p>
-        </div>
-        <div class="features">
-            <h2>Feat</h2>
-            <p>Alert: Add your proficiency (+2) to your Initiative. Immediately after rolling you may swap initiative with one willing ally.</p>
+        <div class="proficiencies ch-section">
+            <div class="ch-section-title">
+                <h2>Proficiencies</h2>
+            </div>
+            <p><span class="dt">Tool Proficiency:</span> Thieves' Tools</p>
         </div>
 
-        <div class="equipment">
-            <h2>Equipment</h2>
-            <table class="border">
+        <div class="features ch-section">
+            <div class="ch-section-title">
+                <h2>Origin Feat</h2>
+            </div>
+            <p><span class="dt">Alert:</span> Add your proficiency (+2) to your Initiative. Immediately after rolling you may swap initiative with one willing ally.</p>
+        </div>
+
+        <div class="equipment ch-section">
+            <div class="ch-section-title">
+                <h2>Equipment</h2>
+                <span class="instruct">(for weapon Attack add ability modifier plus proficiency +2 if proficient)</span>
+            </div>
+            <table class="ch-table">
                 <tr>
-                    <th>Mast.</th>
-                    <th>Weapon</th>
+                    <th class="tl">Mast.</th>
+                    <th class="tl">Weapon</th>
                     <th></th>
                     <th>Attack</th>
-                    <th>Damage</th>
-                    <th>Properties</th>
-                    <th>Mastery</th>
+                    <th class="tl">Damage</th>
+                    <th class="tl">Properties</th>
+                    <th class="tl">Mastery</th>
                 </tr>
                 <tr>
-                    <td>☐</td>
-                    <td>Dagger x2</td>
+                    <td class="nb">☐</td>
+                    <td class="tl">Dagger (simple) x2</td>
                     <td>STR or DEX</td>
                     <td></td>
-                    <td>1D4+MOD piercing</td>
-                    <td>Finesse, Light, Thrown (range 20/60)</td>
-                    <td>Nick (if available)</td>
+                    <td class="tl">1D4+mod piercing</td>
+                    <td class="tl">Finesse, Light, Thrown (range 20/60)</td>
+                    <td class="tl">Nick (if available)</td>
                 </tr>
             </table>
             <p>
-                Other Equipment: 20 Arrows, Thieves' Tools, Crowbar, 2 Pouches, Traveler's Clothes
+                <span class="dt">Other Equipment:</span> 20 Arrows, Thieves' Tools, Crowbar, 2 Pouches, Traveler's Clothes
             </p>
             <p>
-                Money: 16 GP
+                <span class="dt">Money:</span> 16 GP
+            </p>
+        </div>
+
+        <div class="license-footer licence-web licence-print">
+            <p class="cc-logo"><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img
+                  alt="Creative Commons License" style="border-width:0"
+                  src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a></p>
+            <p>© Sly Gryphon, version 2025.01.02. This work is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International
+                License</a>.</p>
             </p>
         </div>
 

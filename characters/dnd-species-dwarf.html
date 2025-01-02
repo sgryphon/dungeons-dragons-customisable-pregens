@@ -1,25 +1,11 @@
 <html>
     <head>
-        <style>
-            .description, .attributes, .saves {
-                margin-bottom: 1em;
-            }
-            .border {
-                border-collapse: collapse;
-                width: 100%;
-            }
-            .border td {
-                border: solid 2px #888888;
-            }
-            .attributes td {
-                text-align: center;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="styles-dnd.css" />
     </head>
     <body>
-        <div class="description">
-            <h1>Species: Dwarf</h1>
-            <table class="border">
+        <h1>Dwarf</h1>
+        <div class="description ch-section">
+            <table class="ch-table">
                 <tr>
                     <th>Type</th>
                     <th>Size</th>
@@ -33,21 +19,34 @@
             </table>
         </div>
 
-        <div class="proficiencies">
-            <h2>Proficiencies</h2>
-            <p>Languages:</p>
+        <div class="proficiencies ch-section">
+            <div class="ch-section-title">
+                <h2>Proficiencies</h2>
+            </div>
+            <span class="dt">Languages:</span> Common, Dwarvish,
             <ul>
-                <li>Common, Dwarvish</li>
-                <li>(pick one) Sign Language - Draconic - Elvish - Giant - Gnomish - Goblin - Halfling - Orc</li>
+                <li><span class="instruct">(pick one)</span> Sign Language — Draconic — Elvish — Giant — Gnomish — Goblin — Halfling — Orc</li>
             </ul>
         </div>
 
-        <div class="features">
-            <h2>Features</h2>
-            <p><b>Darkvision:</b> 120 feet.</p>
-            <p><b>Dwarven Resilience:</b> Resistance to Poison damage. Advantage on saving throws versus Poisoned.</p>
-            <p><b>Dwarven Toughness:</b> Increase hit points by 1 each level (including first).</p>
-            <p><b>Stonecunning:</b> Bonus Action while on stone to gain Tremorsense 60 feet for 10 minutes. Use a number of times equal to proficiency (2). Refresh on Long Rest. ☐ ☐</p>
+        <div class="features ch-section">
+            <div class="ch-section-title">
+                <h2>Features</h2>
+            </div>
+            <p><span class="dt">Darkvision:</span> 120 feet.</p>
+            <p><span class="dt">Dwarven Resilience:</span> Resistance to Poison damage. Advantage on saving throws versus Poisoned.</p>
+            <p><span class="dt">Dwarven Toughness:</span> Increase hit points by 1 each level (including first).</p>
+            <p><span class="dt">Stonecunning:</span> Bonus Action while on stone to gain Tremorsense 60 feet for 10 minutes. Use a number of times equal to proficiency (2). Refresh on Long Rest. ☐ ☐</p>
+        </div>
+
+        <div class="license-footer licence-web licence-print">
+            <p class="cc-logo"><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img
+                  alt="Creative Commons License" style="border-width:0"
+                  src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a></p>
+            <p>© Sly Gryphon, version 2025.01.02. This work is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International
+                License</a>.</p>
+            </p>
         </div>
 
     </body>

@@ -1,69 +1,61 @@
 <html>
     <head>
-        <style>
-            .description, .attributes, .saves {
-                margin-bottom: 1em;
-            }
-            .border {
-                border-collapse: collapse;
-                width: 100%;
-            }
-            .border td {
-                border: solid 2px #888888;
-            }
-            .attributes td {
-                text-align: center;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="styles-dnd.css" />
     </head>
     <body>
-        <div class="description">
-            <h1>Elf</h1>
-            <table class="border">
+        <h1>Elf</h1>
+        <div class="description ch-section">
+            <table class="ch-table">
                 <tr>
-                    <th>Species</th>
+                    <th>Type</th>
                     <th>Size</th>
+                    <th>Speed</th>
                 </tr>
                 <tr>
-                    <td>Elf</td>
-                    <td>Medium</td>
+                    <td>Humanoid</td>
+                    <td>Medium (5-6 ft tall)</td>
+                    <td>30 ft</td>
                 </tr>
             </table>
         </div>
-        <div class="skills">
-            <h2>Keen Senses (pick one, add your attribute modifier plus proficiency (+2))</h2>
-            <table class="border">
+
+        <div class="skills ch-section">
+            <div class="ch-section-title">
+                <h2>Keen Senses</h2>
+                <span class="instruct">(pick one, add your ability modifier plus proficiency +2)</span>
+            </div>
+            <table class="ch-table">
                 <tr>
-                    <th>Prof.</th>
-                    <th>Expert</th>
-                    <th>Skill</th>
+                    <th class="tl w-8">Prof.</th>
+                    <th class="tl w-8">Expert</th>
+                    <th class="tl">Skill</th>
                     <th>Attr.</th>
                     <th>Mod.</th>
                     <th>+ Prof</th>
                     <th>= Total</th>
                 </tr>
                 <tr>
-                    <td>◯</td>
-                    <td>◯</td>
-                    <td>Insight</td>
+                    <td class="nb">◯</td>
+                    <td class="nb">◯</td>
+                    <td class="tl"><b>Perception</b></td>
                     <td>WIS</td>
                     <td></td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td>◯</td>
-                    <td>◯</td>
-                    <td>Perception</td>
+                    <td class="nb">◯</td>
+                    <td class="nb">◯</td>
+                    <td class="tl">Survival</td>
                     <td>WIS</td>
                     <td></td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td>◯</td>
-                    <td>◯</td>
-                    <td>Survival</td>
+                    <td class="nb">◯</td>
+                    <td class="nb">◯</td>
+                    <td class="tl">Insight</td>
                     <td>WIS</td>
                     <td></td>
                     <td></td>
@@ -72,141 +64,176 @@
             </table>
         </div>  
 
-        <div class="proficiencies">
-            <h2>Proficiencies</h2>
-            <p>Languages:</p>
+        <div class="proficiencies ch-section">
+            <div class="ch-section-title">
+                <h2>Proficiencies</h2>
+            </div>
+            <span class="dt">Languages:</span> Common, Elvish,
             <ul>
-                <li>Common, Elvish</li>
-                <li>(pick one) Sign Language - Draconic - Dwarvish - Giant - Gnomish - Goblin - Halfling - Orc</li>
+                <li><span class="instruct">(pick one)</span> Sign Language — Draconic — Dwarvish — Giant — Gnomish — Goblin — Halfling — Orc</li>
             </ul>
         </div>
 
-        <div class="features">
-            <h2>Features</h2>
-            <p>Darkvision: 60 feet.</p>
-            <p>Fey Ancestry: Advantage on saving throws versus Charmed.</p>
-            <p>Trance: You finish a Long Rest in 4 hours of meditation and magic can't put you to sleep.</p>
+        <div class="features ch-section">
+            <div class="ch-section-title">
+                <h2>Features</h2>
+            </div>
+            <p><span class="dt">Darkvision:</span> 60 feet.</p>
+            <p><span class="dt">Fey Ancestry:</span> Advantage on saving throws versus Charmed.</p>
+            <p><span class="dt">Trance:</span> You finish a Long Rest in 4 hours of meditation and magic can't put you to sleep.</p>
         </div>
 
-        <div class="lineage">
-            <h2>Elven Lineage</h2>
+        <div class="lineage ch-section">
+            <div class="ch-section-title">
+                <h2>Elven Lineage</h2>
+            </div>
+            <p><span class="dt">Casting ability:</span> <span class="instruct">(pick one)</span> ◯ Wisdom | ◯ Intelligence | ◯ Charisma</p>
 
-            <p>Casting ability (pick one): ◯ Intelligence | ◯ Wisdom | ◯ Charisma</p>
+            <div class="ch-section-title pt-2">
+                <h3>Lineage</h3> <span class="instruct">(pick one)</span></p>
+            </div>
 
-            <p>Lineage (pick one):</p>
-            <h3>◯ Drow</h3>
-            <ul>
-                <li>Darkvision: 120 ft</li>
-                <li>You know the Dancing Lights cantrip</li>
-            </ul>
-            <table class="border">
+            <div class="flex select-section mt-1 pb-1 bb">
+                <div class="mr-2 mt-1">◯</div>
+                <div>
+                    
+            <h3><b>Wood Elf</b></h3>
+            <p>
+                Speed: 35 ft. You know the Druidcraft cantrip.
+            </p>
+            <table class="ch-table">
                 <tr>
-                    <th>Known</th>
+                    <th class="tl">Known</th>
                     <th>Level</th>
-                    <th>Spell</th>
+                    <th class="tl">Spell</th>
                     <th>Cast</th>
                     <th>Range</th>
                     <th>Components</th>
-                    <th>Notes</th>
+                    <th class="tl">Notes</th>
                 </tr>
                 <tr>
-                    <td>☒</td>
+                    <td class="nb">☒</td>
                     <td>Cantrip</td>
-                    <td>Dancing Lights</td>
+                    <td class="tl">Druidcraft</td>
                     <td>Action</td>
-                    <td>120 ft</td>
-                    <td>V, S, M</td>
-                    <td>Create four orbs (or one humanoid form) that sheds Dim Light in 10 ft. Bonus action to move them up to 60 ft within range; must stay withing 20 ft of another orb.</td>
+                    <td>30 ft</td>
+                    <td>V, S</td>
+                    <td class="tl">Predict the weather, make a flower bloom, a harmless 5 ft sensory effect, or light or put out a campire.</td>
                 </tr>
             </table>
 
-            <h3>◯ High Elf</h3>
-            <ul>
-                <li>You know Prestidigitation or another Wizard cantrip</li>
-                <li>You may replace it with any other Wizard cantrip after a long rest</p>
-            </ul>
-             <table class="border">
+                </div>
+            </div>
+
+
+            <div class="flex select-section mt-1 pb-1 bb">
+                <div class="mr-2 mt-1">◯</div>
+                <div>
+    
+        <h3>High Elf</h3>
+            <p>
+                You know Prestidigitation or another Wizard cantrip.
+                You may replace it with any other Wizard cantrip after a Long Rest.
+            </p>
+             <table class="ch-table">
                 <tr>
-                    <th>Known</th>
+                    <th class="tl">Known</th>
                     <th>Level</th>
-                    <th>Spell</th>
+                    <th class="tl">Spell</th>
                     <th>Cast</th>
                     <th>Range</th>
                     <th>Components</th>
-                    <th>Notes</th>
+                    <th class="tl">Notes</th>
                 </tr>
                 <tr>
-                    <td>☐</td>
+                    <td class="nb">☐</td>
                     <td>Cantrip</td>
-                    <td>Acid Splash</td>
+                    <td class="tl">Acid Splash</td>
                     <td>Action</td>
                     <td>60 ft</td>
                     <td>V, S</td>
-                    <td>5 ft radius, DEX save for 1d6 acid</td>
+                    <td class="tl">5 ft radius, DEX save for 1d6 acid</td>
                 </tr>
                 <tr>
-                    <td>☐</td>
+                    <td class="nb">☐</td>
                     <td>Cantrip</td>
-                    <td>Fire Bolt</td>
+                    <td class="tl">Fire Bolt</td>
                     <td>Action</td>
                     <td>120 ft</td>
                     <td>V, S</td>
-                    <td>Attack for 1d10 fire; set unattended items alight</td>
+                    <td class="tl">Attack for 1d10 fire; set unattended items alight</td>
                 </tr>
                 <tr>
-                    <td>☐</td>
+                    <td class="nb">☐</td>
                     <td>Cantrip</td>
-                    <td>Mage Hand</td>
+                    <td class="tl">Mage Hand</td>
                     <td>Action</td>
                     <td>30 ft</td>
                     <td>V, S</td>
-                    <td>Spectral hand for 1 minute, can carry 10 lbs, move 30 ft as an action, must stay in range</td>
+                    <td class="tl">Spectral hand for 1 minute, can carry 10 lbs, move 30 ft as an action, must stay in range</td>
                 </tr>
                 <tr>
-                    <td>☐</td>
+                    <td class="nb">☐</td>
                     <td>Cantrip</td>
-                    <td>Minor Illusion</td>
+                    <td class="tl">Minor Illusion</td>
                     <td>Action</td>
                     <td>30 ft</td>
                     <td>S, M</td>
-                    <td>Image or sound (not both) in 5 ft cube, lasts 1 minute</td>
+                    <td class="tl">Image or sound (not both) in 5 ft cube, lasts 1 minute</td>
                 </tr>
                 <tr>
-                    <td>☐</td>
+                    <td class="nb">☐</td>
                     <td>Cantrip</td>
-                    <td>Prestidigitation</td>
+                    <td class="tl">Prestidigitation</td>
                     <td>Action</td>
                     <td>10 ft</td>
                     <td>V, S</td>
-                    <td>Minor sensory effect, light/extinguish campfire, clean/soil 5 ft, or magic mark for 1 hour</td>
+                    <td class="tl">Minor sensory effect, light/extinguish campfire, clean/soil 5 ft, or magic mark for 1 hour</td>
                 </tr>
             </table>
+                </div>
+            </div>
 
-            <h3>◯ Wood Elf</h3>
-            <ul>
-                <li>Speed: 35 ft</li>
-                <li>You know the Druidcraft cantrip</li>
-            </ul>
-            <table class="border">
-                <tr>
-                    <th>Known</th>
-                    <th>Level</th>
-                    <th>Spell</th>
-                    <th>Cast</th>
-                    <th>Range</th>
-                    <th>Components</th>
-                    <th>Notes</th>
-                </tr>
-                <tr>
-                    <td>☒</td>
-                    <td>Cantrip</td>
-                    <td>Druidcraft</td>
-                    <td>Action</td>
-                    <td>30 ft</td>
-                    <td>V, S</td>
-                    <td>Predict the weather, make a flower bloom, a harmless 5 ft sensory effect, or light or put out a campire.</td>
-                </tr>
-            </table>
+            <div class="flex select-section mt-1 pb-1">
+                <div class="mr-2 mt-1">◯</div>
+                <div>
+                    <h3>Drow</h3>
+                    <p>
+                        Darkvision: 120 ft. You know the Dancing Lights cantrip.
+                    </p>
+                    <table class="ch-table">
+                        <tr>
+                            <th class="tl">Known</th>
+                            <th>Level</th>
+                            <th class="tl">Spell</th>
+                            <th>Cast</th>
+                            <th>Range</th>
+                            <th>Components</th>
+                            <th class="tl">Notes</th>
+                        </tr>
+                        <tr>
+                            <td class="nb">☒</td>
+                            <td>Cantrip</td>
+                            <td class="tl">Dancing Lights</td>
+                            <td>Action</td>
+                            <td>120 ft</td>
+                            <td>V, S, M</td>
+                            <td class="tl">Create four orbs (or one humanoid form) that sheds Dim Light in 10 ft. Bonus action to move them up to 60 ft within range; must stay withing 20 ft of another orb.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="license-footer licence-web licence-print">
+            <p class="cc-logo"><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img
+                  alt="Creative Commons License" style="border-width:0"
+                  src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a></p>
+            <p>© Sly Gryphon, version 2025.01.02. This work is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International
+                License</a>.</p>
+            </p>
         </div>
 
     </body>

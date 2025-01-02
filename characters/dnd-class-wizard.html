@@ -85,7 +85,7 @@
                 text-decoration: underline;
                 color: rgb(153, 153, 153);
             }
-            .ability-scores th {
+            .ability-scores th, .saves th {
                 font-size: 0.8rem;
                 font-weight: normal;
                 text-decoration: none;
@@ -135,7 +135,8 @@
                 font-size: 0.8rem;
                 font-weight: bold;
                 text-transform: uppercase;
-                border-bottom: solid 1px rgb(0, 0, 0)
+                border-bottom: solid 1px rgb(0, 0, 0);
+                padding-top: 0.5rem;
             }
             .ch-section .instruct {
                 color: rgb(153, 153, 153);
@@ -194,14 +195,6 @@
                     page-break-before: always;
                 }
 
-                .page1-footer {
-                    display: block;
-                }
-
-                .page2-footer {
-                    display: none;
-                }
-
                 .license-footer {
                     display: block;
                     margin-top: 2em;
@@ -213,11 +206,19 @@
                     margin-right: 1em;
                     margin-bottom: 1em;
                 }
+
+                .page1-footer {
+                    display: block;
+                }
+
+                .page2-footer {
+                    display: none;
+                }
             }
         </style>
     </head>
     <body>
-        <h1>Class: Wizard (level 1)</h1>
+        <h1>Wizard (level 1)</h1>
         <div class="description ch-section">
             <table class="ch-table">
                 <tr>
@@ -271,73 +272,32 @@
                     <td>+2</td>
                     <td>+0</td>
                 </tr>
-            </table>
-        </div>
-        <div class="flex">
-            <div class="ch-tests w-4-5">
-         <div class="saves ch-section">
-            <div class="ch-section-title">
-                <h2>Saving throws</h2>
-            </div>
-            <table class="ch-table">
-                <tr>
-                    <th class="tl w-8">Prof.</th>
-                    <th class="tl">Saving Throw</th>
-                    <th></th>
-                    <th>Attr</th>
-                    <th>+ Prof</th>
-                    <th>= Total</th>
+                <tr class="ch-table-section">
+                    <td colspan="7">Saving Throws</td>
                 </tr>
                 <tr>
+                    <td class="tl nb">Proficient</td>
                     <td class="nb"></td>
-                    <td class="tl">Strength</td>
-                    <td>STR</td>
-                    <td>-1</td>
-                    <td></td>
-                    <td>-1</td>
-                </tr>
-                <tr>
                     <td class="nb"></td>
-                    <td class="tl">Dexterity</td>
-                    <td>DEX</td>
-                    <td>+1</td>
-                    <td></td>
-                    <td>+1</td>
-                </tr>
-                <tr>
                     <td class="nb"></td>
-                    <td class="tl">Constitution</td>
-                    <td>CON</td>
-                    <td>+2</td>
-                    <td></td>
-                    <td>+2</td>
-                </tr>
-                <tr>
                     <td class="nb">⚫</td>
-                    <td class="tl">Intelligence</td>
-                    <td>INT</td>
-                    <td>+3</td>
+                    <td class="nb">⚫</td>
+                    <td class="nb"></td>
+                </tr>
+                <tr>
+                    <td class="tl nb">Save</td>
+                    <td>-1</td>
+                    <td>+1</td>
                     <td>+2</td>
                     <td>+5</td>
-                </tr>
-                <tr>
-                    <td class="nb">⚫</td>
-                    <td class="tl">Wisdom</td>
-                    <td>WIS</td>
-                    <td>+2</td>
-                    <td>+2</td>
                     <td>+4</td>
-                </tr>
-                <tr>
-                    <td class="nb"></td>
-                    <td class="tl">Charisma</td>
-                    <td>CHA</td>
-                    <td>+0</td>
-                    <td></td>
                     <td>+0</td>
                 </tr>
             </table>
         </div>
+
+        <div class="flex">
+            <div class="ch-tests w-4-5">
         <div class="skills ch-section">
             <div class="ch-section-title">
                 <h2>Skills</h2>
@@ -417,6 +377,16 @@
             <p><span class="dt">Weapon Proficiencies:</span> Simple weapons</p>
             <p><span class="dt">Armor Training:</span> None</p>
         </div>
+
+        <div class="features ch-section">
+            <div class="ch-section-title">
+                <h2>Class Features</h2>
+            </div>
+            <p><span class="dt">Spellcasting:</span> Intelligence is your spellcasting ability. <b>Cantrips.</b> You know 3 Cantrips. You can replace once Cantrip after a long rest. <b>Spellbook.</b> Your spellbook contains 6 spells, of which you can prepare 4 each Long Rest.</p>
+            <p><span class="dt">Ritual Adept:</span> You can use your spellbook to cast a Ritual spell without having it prepared.</p>
+            <p><span class="dt">Arcane Recovery:</span> Regain one level (half Wizard level rounded up) of spell slots (at the end of a Short Rest). Use once per Long Rest. ☐</p>
+        </div>
+
             </div>
             <div class="traits">
 
@@ -465,14 +435,8 @@
         
             </div>
         </div>
-        <div class="features ch-section">
-            <div class="ch-section-title">
-                <h2>Class Features</h2>
-            </div>
-            <p><span class="dt">Spellcasting:</span> Intelligence is your spellcasting ability. <b>Cantrips.</b> You know 3 Cantrips. You can replace once Cantrip after a long rest. <b>Spellbook.</b> Your spellbook contains 6 spells, of which you can prepare 4 each Long Rest.</p>
-            <p><span class="dt">Ritual Adept:</span> You can use your spellbook to cast a Ritual spell without having it prepared.</p>
-            <p><span class="dt">Arcane Recovery:</span> Regain one level (half Wizard level rounded up) of spell slots (at the end of a Short Rest). Use once per Long Rest. ☐</p>
-        </div>
+
+
         <div class="equipment ch-section">
             <div class="ch-section-title">
                 <h2>Equipment</h2>
@@ -543,7 +507,7 @@
                     <td>Intelligence</td>
                     <td>13</td>
                     <td>+5</td>
-                    <td>2</td>
+                    <td>2 ☐ ☐</td>
                 </tr>
             </table>
         </div>

@@ -3,7 +3,7 @@
         <link rel="stylesheet" type="text/css" href="styles-dnd.css" />
     </head>
     <body>
-        <h1>Background: Sage</h1>
+        <h1>Background: Acolyte</h1>
 
         <div class="skills ch-section">
             <div class="ch-section-title">
@@ -23,8 +23,8 @@
                 <tr>
                     <td class="nb">⚫</td>
                     <td class="nb">◯</td>
-                    <td class="tl">Arcana</td>
-                    <td>INT</td>
+                    <td class="tl">Insight</td>
+                    <td>WIS</td>
                     <td></td>
                     <td>+2</td>
                     <td></td>
@@ -32,7 +32,7 @@
                 <tr>
                     <td class="nb">⚫</td>
                     <td class="nb">◯</td>
-                    <td class="tl">History</td>
+                    <td class="tl">Religion</td>
                     <td>INT</td>
                     <td></td>
                     <td>+2</td>
@@ -51,30 +51,9 @@
         <div class="equipment ch-section">
             <div class="ch-section-title">
                 <h2>Equipment</h2>
-                <span class="instruct">(for weapon Attack add ability modifier plus proficiency +2 if proficient)</span>
             </div>
-            <table class="ch-table">
-                <tr>
-                    <th class="tl">Mast.</th>
-                    <th class="tl">Weapon</th>
-                    <th></th>
-                    <th>Attack</th>
-                    <th class="tl">Damage</th>
-                    <th class="tl">Properties</th>
-                    <th class="tl">Mastery</th>
-                </tr>
-                <tr>
-                    <td class="nb">☐</td>
-                    <td class="tl">Quarterstaff (simple)</td>
-                    <td>STR</td>
-                    <td></td>
-                    <td class="tl">1D6+mod bludgeoning</td>
-                    <td class="tl">Versatile (1D8)</td>
-                    <td class="tl">Topple (if available)</td>
-                </tr>
-            </table>
             <p>
-                <span class="dt">Other Equipment:</span> Calligrapher's Supplies, Book (history), Parchment (8 sheets), Robe
+                <span class="dt">Other Equipment:</span> Calligrapher's Supplies, Book (prayers), Holy Symbol, Parchment (10 sheets), Robe
             </p>
             <p>
                 <span class="dt">Money:</span> 8 GP
@@ -83,7 +62,7 @@
 
         <div class="features ch-section">
             <div class="ch-section-title">
-                <h2>Origin Feat: Magic Initiate (Wizard)</h2>
+                <h2>Origin Feat: Magic Initiate (Cleric)</h2>
             </div>
             <p>You learn two cantrips and one level 1 spell that you can cast once per Long Rest. ☐</p>
             <p><span class="dt">Casting ability:</span> <span class="instruct">(pick one)</span> ◯ Intelligence | ◯ Wisdom | ◯ Charisma</p>
@@ -91,7 +70,6 @@
             <div class="ch-section-title mt-2 pb-1">
                 <h3>Cantrip</h3> <span class="instruct">(pick two)</span>
             </div>
-
             <table class="ch-table">
                 <tr>
                     <th>Known</th>
@@ -105,59 +83,58 @@
                 <tr>
                     <td class="nb">◯</td>
                     <td>Cantrip</td>
-                    <td class="tl"><b>Ray of Frost</b></td>
+                    <td class="tl"><b>Mending</b></td>
+                    <td>Action</td>
+                    <td>Touch</td>
+                    <td>V, S, M</td>
+                    <td class="tl">Repair a single break or tear no larger than 1 ft.</td>
+                </tr>
+                <tr>
+                    <td class="nb">◯</td>
+                    <td>Cantrip</td>
+                    <td class="tl"><b>Resistance</b></td>
+                    <td>Action</td>
+                    <td>Touch</td>
+                    <td>V, S</td>
+                    <td class="tl">Concentration. Lasts 1 minute. Choose Acid, Bludgeoning, Cold, Fire, Lightning, Necrotic, Piercing, Poison, Radiant, Slashing, or Thunder. Once per turn target can reduce damage of this type by 1D4.</td>
+                </tr>
+                <tr>
+                    <td class="nb">◯</td>
+                    <td>Cantrip</td>
+                    <td class="tl">Guidance</td>
+                    <td>Action</td>
+                    <td>Touch</td>
+                    <td>V, S</td>
+                    <td class="tl">Concentration. Lasts 1 minute. Targets adds +1D4 to chosen skill.</td>
+                </tr>
+                <tr>
+                    <td class="nb">◯</td>
+                    <td>Cantrip</td>
+                    <td class="tl">Light</td>
+                    <td>Action</td>
+                    <td>Touch</td>
+                    <td>V, M</td>
+                    <td class="tl">Sheds 20 ft bright plus 20 ft dim light. Lasts 1 hour.</td>
+                </tr>
+                <tr>
+                    <td class="nb">◯</td>
+                    <td>Cantrip</td>
+                    <td class="tl">Sacred Flame</td>
                     <td>Action</td>
                     <td>60 ft</td>
                     <td>V, S</td>
-                    <td class="tl">Ranged spell attack for 1D8 cold. On a hit reduce speed by 10 ft.</td>
+                    <td class="tl">DEX save DC 13, with no cover benefits, or take 1D8 Radiant damage.</td>
                 </tr>
                 <tr>
                     <td class="nb">◯</td>
                     <td>Cantrip</td>
-                    <td class="tl"><b>Minor Illusion</b></td>
+                    <td class="tl">Thaumaturgy</td>
                     <td>Action</td>
                     <td>30 ft</td>
-                    <td>S, M</td>
-                    <td class="tl">Image or sound (not both) in 5 ft cube, lasts 1 minute.</td>
+                    <td>V</td>
+                    <td class="tl">Minor wonder for up to 1 minute. Alter your eyes, booming voice, fire play (bright/dim/colour), open/close a door or window, one phantom sound, or minor ground tremors.</td>
                 </tr>
-                <tr>
-                    <td class="nb">◯</td>
-                    <td>Cantrip</td>
-                    <td class="tl">Acid Splash</td>
-                    <td>Action</td>
-                    <td>60 ft</td>
-                    <td>V, S</td>
-                    <td class="tl">5 ft radius. DEX save for 1D6 acid.</td>
-                </tr>
-                <tr>
-                    <td class="nb">◯</td>
-                    <td>Cantrip</td>
-                    <td class="tl">Fire Bolt</td>
-                    <td>Action</td>
-                    <td>120 ft</td>
-                    <td>V, S</td>
-                    <td class="tl">Ranged spell attack for 1D10 fire. Set unattended items alight.</td>
-                </tr>
-                <tr>
-                    <td class="nb">◯</td>
-                    <td>Cantrip</td>
-                    <td class="tl">Mage Hand</td>
-                    <td>Action</td>
-                    <td>30 ft</td>
-                    <td>V, S</td>
-                    <td class="tl">Spectral hand for 1 minute, can carry 10 lbs, move 30 ft as an action, must stay in range</td>
-                </tr>
-                <tr>
-                    <td class="nb">◯</td>
-                    <td>Cantrip</td>
-                    <td class="tl">Prestidigitation</td>
-                    <td>Action</td>
-                    <td>10 ft</td>
-                    <td>V, S</td>
-                    <td class="tl">Minor sensory effect, light/extinguish campfire, clean/soil 5 ft, or magic mark for 1 hour.</td>
-                </tr>
-            </table>
-
+=            </table>
             <div class="ch-section-title mt-2 pb-1">
                 <h3>Spell</h3> <span class="instruct">(pick one)</span>
             </div>
@@ -175,7 +152,34 @@
                 <tr>
                     <td class="nb">◯</td>
                     <td>1</td>
-                    <td class="tl"><b>Detect Magic</b></td>
+                    <td class="tl"><b>Shield of Faith</b></td>
+                    <td>Bonus Action</td>
+                    <td>60 ft</td>
+                    <td>V, S, M</td>
+                    <td class="tl">Concentration. Target has +2 AC for 10 minutes.</td>
+                </tr>
+                <tr>
+                    <td class="nb">◯</td>
+                    <td>1</td>
+                    <td class="tl">Bless</td>
+                    <td>Action</td>
+                    <td>30 ft</td>
+                    <td>V, S, M</td>
+                    <td class="tl">Concentration. Bless 3 creatures for 1 minute. They add +1d4 to Attack rolls and Saving Throws.</td>
+                </tr>
+                <tr>
+                    <td class="nb">◯</td>
+                    <td>1</td>
+                    <td class="tl">Command</td>
+                    <td>Action</td>
+                    <td>60 ft</td>
+                    <td>V</td>
+                    <td class="tl">WIS save (DC 10 + spellcasting modifier) or must spend their turn following your command: Approach, Drop, Flee, Grovel, Halt.</td>
+                </tr>
+                <tr>
+                    <td class="nb">◯</td>
+                    <td>1</td>
+                    <td class="tl">Detect Magic</td>
                     <td>Action</td>
                     <td>Self</td>
                     <td>V, S</td>
@@ -184,47 +188,20 @@
                 <tr>
                     <td class="nb">◯</td>
                     <td>1</td>
-                    <td class="tl">Burning Hands</td>
-                    <td>Action</td>
-                    <td>Self</td>
-                    <td>V, S</td>
-                    <td class="tl">15 ft cone. 3D6 fire damage. DEX save for half damage. Set unattended items alight.</td>
-                </tr>
-                <tr>
-                    <td class="nb">◯</td>
-                    <td>1</td>
-                    <td class="tl">Charm Person</td>
-                    <td>Action</td>
-                    <td>30 ft</td>
-                    <td>V, S</td>
-                    <td class="tl">WIS save (advantage if fighting) or Charmed. Lasts 1 hour. When the spell ends they know they were charmed.</td>
-                </tr>
-                <tr>
-                    <td class="nb">◯</td>
-                    <td>1</td>
-                    <td class="tl">Grease</td>
-                    <td>Action</td>
-                    <td>60 ft</td>
-                    <td>V, S, M</td>
-                    <td class="tl">10 ft square of non-flamable grease. Must make DEX save DC 13 or fall Prone. Must save again if enter or end turn there.</td>
-                </tr>
-                <tr>
-                    <td class="nb">◯</td>
-                    <td>1</td>
-                    <td class="tl">Jump</td>
+                    <td class="tl">Healing Word</td>
                     <td>Bonus Action</td>
+                    <td>60 ft</td>
+                    <td>V</td>
+                    <td class="tl">Heal 2D4 + spellcasing modifier hit points.</td>
+                </tr>
+                <tr>
+                    <td class="nb">◯</td>
+                    <td>1</td>
+                    <td class="tl">Protection from Evil and Good</td>
+                    <td>Action</td>
                     <td>Touch</td>
                     <td>V, S, M</td>
-                    <td class="tl">Lasts 1 minute. Target can jump 30 ft by spending 10 ft of movement.</td>
-                </tr>
-                <tr>
-                    <td class="nb">◯</td>
-                    <td>1</td>
-                    <td class="tl">Shield</td>
-                    <td>Reaction</td>
-                    <td>Self</td>
-                    <td>V, S</td>
-                    <td class="tl">You have +5 bonus to AC until the start of your next turn, and take no damage from Magic Missile.</td>
+                    <td class="tl">Concentration. Protect against Aberrations, Celestials, Elementals, Fey, Fiends, and Undead for 10 minutes. Have Disadvantage on attacks and can't Charm, Frighten, or possess.</td>
                 </tr>
             </table>
 

@@ -3,7 +3,7 @@
         <link rel="stylesheet" type="text/css" href="styles-dnd.css" />
     </head>
     <body>
-        <h1>Wizard</h1>
+        <h1>Cleric</h1>
         <div class="description ch-section">
             <table class="ch-table">
                 <tr>
@@ -16,11 +16,11 @@
                 </tr>
                 <tr>
                     <td class="tl"></td>
-                    <td>+1</td>
+                    <td>-1</td>
                     <td>+2</td>
-                    <td>11</td>
-                    <td>1D6</td>
-                    <td>8</td>
+                    <td>14 (with Shield)</td>
+                    <td>1D8</td>
+                    <td>10</td>
                 </tr>
             </table>
         </div>
@@ -41,21 +41,21 @@
                 </tr>
                 <tr>
                     <td class="tl nb">Score</td>
-                    <td>8</td>
-                    <td>12</td>
                     <td>14</td>
-                    <td>17</td>
+                    <td>8</td>
                     <td>14</td>
                     <td>10</td>
+                    <td>17</td>
+                    <td>12</td>
                 </tr>
                 <tr>
                     <td class="tl nb">Modifier</td>
-                    <td>-1</td>
-                    <td>+1</td>
                     <td>+2</td>
-                    <td>+3</td>
+                    <td>-1</td>
                     <td>+2</td>
                     <td>+0</td>
+                    <td>+3</td>
+                    <td>+1</td>
                 </tr>
                 <tr class="ch-table-section">
                     <td colspan="7">Saving Throws</td>
@@ -65,18 +65,18 @@
                     <td class="nb"></td>
                     <td class="nb"></td>
                     <td class="nb"></td>
-                    <td class="nb">⚫</td>
-                    <td class="nb">⚫</td>
                     <td class="nb"></td>
+                    <td class="nb">⚫</td>
+                    <td class="nb">⚫</td>
                 </tr>
                 <tr>
                     <td class="tl nb">Save</td>
-                    <td>-1</td>
-                    <td>+1</td>
                     <td>+2</td>
-                    <td>+5</td>
-                    <td>+4</td>
+                    <td>-1</td>
+                    <td>+2</td>
                     <td>+0</td>
+                    <td>+5</td>
+                    <td>+3</td>
                 </tr>
             </table>
         </div>
@@ -99,17 +99,25 @@
                 </tr>
                 <tr>
                     <td class="nb">◯</td>
-                    <td class="tl"><b>Arcana</b></td>
+                    <td class="tl"><b>Religion</b></td>
                     <td>INT</td>
+                    <td>+0</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="nb">◯</td>
+                    <td class="tl"><b>Medicine</b></td>
+                    <td>WIS</td>
                     <td>+3</td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td class="nb">◯</td>
-                    <td class="tl"><b>History</b></td>
+                    <td class="tl">History</td>
                     <td>INT</td>
-                    <td>+3</td>
+                    <td>+0</td>
                     <td></td>
                     <td></td>
                 </tr>
@@ -117,39 +125,15 @@
                     <td class="nb">◯</td>
                     <td class="tl">Insight</td>
                     <td>WIS</td>
-                    <td>+2</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="nb">◯</td>
-                    <td class="tl">Investigation</td>
-                    <td>INT</td>
                     <td>+3</td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td class="nb">◯</td>
-                    <td class="tl">Medicine</td>
-                    <td>WIS</td>
-                    <td>+2</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="nb">◯</td>
-                    <td class="tl">Nature</td>
-                    <td>INT</td>
-                    <td>+3</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="nb">◯</td>
-                    <td class="tl">Religion</td>
-                    <td>INT</td>
-                    <td>+3</td>
+                    <td class="tl">Persuasion</td>
+                    <td>CHA</td>
+                    <td>+1</td>
                     <td></td>
                     <td></td>
                 </tr>
@@ -161,16 +145,23 @@
                 <h2>Proficiencies</h2>
             </div>
             <p><span class="dt">Weapon Proficiencies:</span> Simple weapons</p>
-            <p><span class="dt">Armor Training:</span> None</p>
+            <p><span class="dt">Armor Training:</span> Light and Medium armor, and Shields</p>
         </div>
 
         <div class="features ch-section">
             <div class="ch-section-title">
                 <h2>Class Features</h2>
             </div>
-            <p><span class="dt">Spellcasting:</span> Intelligence is your spellcasting ability and you can use an Arcane Focus. <b>Cantrips.</b> You know 3 Cantrips. You can replace once Cantrip after a long rest. <b>Spellbook.</b> Your spellbook contains 6 spells, of which you can prepare 4 each Long Rest.</p>
-            <p><span class="dt">Ritual Adept:</span> You can use your spellbook to cast a Ritual spell without having it prepared.</p>
-            <p><span class="dt">Arcane Recovery:</span> Regain one level (half Wizard level rounded up) of spell slots (at the end of a Short Rest). Use once per Long Rest. ☐</p>
+            <p><span class="dt">Spellcasting:</span> Wisdom is your spellcasting ability and you can use a Holy Symbol. <b>Cantrips.</b> You know 3 Cantrips. <b>Prepared Spells.</b> You can prepare 4 Cleric spells each Long Rest.</p>
+            <p><span class="dt">Divine Order:</span> <span class="instruct">(pick one)</span></p>
+            <ul>
+                <li>
+                    ◯ <b>Thaumaturge.</b> You know one extra cantrip. Get a bonus to Intelligence (Arcana) and Intelligence (Religion) checks equal to your Wisdom modifier (+3).
+                </li>
+                <li>
+                    ◯ Protector. Gain proficiency with Martial weapons and training with Heavy armor.
+                </li>
+            </ul>
         </div>
 
             </div>
@@ -183,17 +174,17 @@
                     <p>
                         <span class="dt">Reputation:</span>
                         <span class="instruct">(pick one)</span>
-                        Decisive — Logical — Informative — Curious
+                        Serene — Considerate — Attentive — Wary
                     </p>
                     <p>
                         <span class="dt">Trait:</span>
                         <span class="instruct">(pick one)</span>
-                        Energetic — Hale — Hearty — Stable — Serene — Considerate — Attentive — Wary
+                        Muscular — Sinewy — Protective — Direct — Energetic — Hale — Hearty — Stable
                     </p>
                     <p>
                         <span class="dt">Flaw:</span>
                         <span class="instruct">(pick one)</span>
-                        Weak — Slight — Indirect — Self&#8209;conscious
+                        Jittery — Clumsy — Hesitant — Unsteady
                     </p>
                 </div>
                 <div class="alignment ch-section">
@@ -235,35 +226,28 @@
                     <th class="tl">Properties</th>
                 </tr>
                 <tr>
-                    <td class="tl">Dagger x2</td>
-                    <td>DEX</td>
-                    <td>+4</td>
-                    <td class="tl">1D4+2 piercing</td>
-                    <td class="tl">Finesse, Light, Thrown (range 20/60)</td>
-                </tr>
-                <tr>
-                    <td class="tl">Arcane Focus (Quarterstaff)</td>
+                    <td class="tl">Mace</td>
                     <td>STR</td>
-                    <td>+1</td>
-                    <td class="tl">1D6+1 bludgeoning</td>
-                    <td class="tl">Versatile (1D8)</td>
+                    <td>+4</td>
+                    <td class="tl">1D6+2 bludgeoning</td>
+                    <td class="tl"></td>
                 </tr>
             </table>
             <p>
-                <span class="dt">Other Equipment:</span> Robe, Spellbook, Backpack, Book, Ink, Ink Pen, Lamp, 10 flasks of Oil, 10 sheets of Parchment, Tinderbox
+                <span class="dt">Other Equipment:</span> Chain Shirt (medium, AC 13 + DEX mod max 2), Shield (AC +2), Holy Symbol, Backpack, Blanket, Holy Water, Lamp, 7 days of Rations, Robe, Tinderbox
             </p>
             <p>
                 <span class="dt">Trinket:</span>
                 <span class="instruct">(pick one)</span>
             </p>
             <ul>
-                <li>◯ A gold coin minted in an unknown land (3)</li>
-                <li>◯ A pipe that blows bubbles (19)</li>
-                <li>◯ An eggshell painted with scenes of misery in disturbing detail (73)</li>
-                <li>◯ Empty wine bottle bearing a pretty label that says, “The Wizard of Wines Winery, Red Dragon Crush, 331422-W” (93)</li>
+                <li>◯ A diary written in a language you don't know (04)</li>
+                <li>◯ A 1-pound egg with a bright-red shell (18)</li>
+                <li>◯ An alabaster mask (63)</li>
+                <li>◯ An ornate scabbard that fits no blade you have found (78)</li>
             </ul>
             <p>
-                <span class="dt">Money:</span> 5 GP
+                <span class="dt">Money:</span> 7 GP
             </p>
         </div>
         
@@ -278,7 +262,7 @@
         </div>
 
         <div class="spells page2-header">
-            <h2>Wizard Spells</h2>
+            <h2>Cleric Spells</h2>
         </div>
         <div class="spellcasting ch-section">
             <table class="ch-table">
@@ -289,7 +273,7 @@
                     <th>Slots (1st level)</th>
                 </tr>
                 <tr>
-                    <td>Intelligence</td>
+                    <td>Wisdom</td>
                     <td>13</td>
                     <td>+5</td>
                     <td>2 ☐ ☐</td>
@@ -299,7 +283,7 @@
         <div class="cantrips ch-section">
             <div class="ch-section-title">
                 <h3>Cantrips</h3>
-                <span class="instruct">(pick 3, may swap one after a Long Rest)</span>
+                <span class="instruct">(pick 3)</span>
             </div>
             <table class="ch-table">
                 <tr>
@@ -312,34 +296,34 @@
                     <th class="tl">Notes</th>
                 </tr>
                 <tr>
-                    <td class="nb">☐</td>
+                    <td class="nb">◯</td>
                     <td>Cantrip</td>
-                    <td class="tl"><b>Fire Bolt</b></td>
+                    <td class="tl"><b>Guidance</b></td>
                     <td>Action</td>
-                    <td>120 ft</td>
+                    <td>Touch</td>
                     <td>V, S</td>
-                    <td class="tl">Attack +5 for 1d10 fire. Set unattended items alight.</td>
+                    <td class="tl">Concentration. Lasts 1 minute. Targets adds +1D4 to chosen skill.</td>
                 </tr>
                 <tr>
-                    <td class="nb">☐</td>
+                    <td class="nb">◯</td>
                     <td>Cantrip</td>
-                    <td class="tl"><b>Mage Hand</b></td>
-                    <td>Action</td>
-                    <td>30 ft</td>
-                    <td>V, S</td>
-                    <td class="tl">Spectral hand for 1 minute, can carry 10 lbs, move 30 ft as an action, must stay in range</td>
-                </tr>
-                <tr>
-                    <td class="nb">☐</td>
-                    <td>Cantrip</td>
-                    <td class="tl"><b>Acid Splash</b></td>
+                    <td class="tl"><b>Sacred Flame</b></td>
                     <td>Action</td>
                     <td>60 ft</td>
                     <td>V, S</td>
-                    <td class="tl">5 ft radius. DEX save DC 13 for 1d6 acid.</td>
+                    <td class="tl">DEX save DC 13, with no cover benefits, or take 1D8 Radiant damage.</td>
                 </tr>
                 <tr>
-                    <td class="nb">☐</td>
+                    <td class="nb">◯</td>
+                    <td>Cantrip</td>
+                    <td class="tl"><b>Thaumaturgy</b></td>
+                    <td>Action</td>
+                    <td>30 ft</td>
+                    <td>V</td>
+                    <td class="tl">Minor wonder for up to 1 minute. Alter your eyes, booming voice, fire play (bright/dim/colour), open/close a door or window, one phantom sound, or minor ground tremors.</td>
+                </tr>
+                <tr>
+                    <td class="nb">◯</td>
                     <td>Cantrip</td>
                     <td class="tl">Light</td>
                     <td>Action</td>
@@ -348,42 +332,41 @@
                     <td class="tl">Sheds 20 ft bright plus 20 ft dim light. Lasts 1 hour.</td>
                 </tr>
                 <tr>
-                    <td class="nb">☐</td>
+                    <td class="nb">◯</td>
                     <td>Cantrip</td>
-                    <td class="tl">Minor Illusion</td>
+                    <td class="tl">Mending</td>
                     <td>Action</td>
-                    <td>30 ft</td>
-                    <td>S, M</td>
-                    <td class="tl">Image or sound (not both) in 5 ft cube, lasts 1 minute.</td>
+                    <td>Touch</td>
+                    <td>V, S, M</td>
+                    <td class="tl">Repair a single break or tear no larger than 1 ft.</td>
                 </tr>
                 <tr>
-                    <td class="nb">☐</td>
+                    <td class="nb">◯</td>
                     <td>Cantrip</td>
-                    <td class="tl">Prestidigitation</td>
+                    <td class="tl">Resistance</td>
                     <td>Action</td>
-                    <td>10 ft</td>
+                    <td>Touch</td>
                     <td>V, S</td>
-                    <td class="tl">Minor sensory effect, light/extinguish campfire, clean/soil 5 ft, or magic mark for 1 hour.</td>
+                    <td class="tl">Concentration. Lasts 1 minute. Choose Acid, Bludgeoning, Cold, Fire, Lightning, Necrotic, Piercing, Poison, Radiant, Slashing, or Thunder. Once per turn target can reduce damage of this type by 1D4.</td>
                 </tr>
                 <tr>
-                    <td class="nb">☐</td>
+                    <td class="nb">◯</td>
                     <td>Cantrip</td>
-                    <td class="tl">Ray of Frost</td>
+                    <td class="tl">Spare the Dying</td>
                     <td>Action</td>
-                    <td>60 ft</td>
+                    <td>15 ft</td>
                     <td>V, S</td>
-                    <td class="tl">Attack +5 for 1d8 cold. On a hit reduce speed by 10 ft.</td>
+                    <td class="tl">Target becomes stable.</td>
                 </tr>
             </table>
         </div>
         <div class="spellbook ch-section">
             <div class="ch-section-title">
-                <h3>Spellbook</h3>
-                <span class="instruct">(add 4 spells to your book and prepare them, then add 2 more rituals (or other) to your book)</span>
+                <h3>Spells</h3>
+                <span class="instruct">(prepare 4 spells each Long Rest)</span>
             </div>
             <table class="ch-table">
                 <tr>
-                    <th>Book</th>
                     <th>Prepared</th>
                     <th>Level</th>
                     <th class="tl">Spell</th>
@@ -393,147 +376,103 @@
                     <th class="tl">Notes</th>
                 </tr>
                 <tr>
-                    <td class="nb">◯</td>
                     <td class="nb">☐</td>
                     <td>1</td>
-                    <td class="tl"><b>Burning Hands</b></td>
+                    <td class="tl"><b>Bless</b></td>
+                    <td>Action</td>
+                    <td>30 ft</td>
+                    <td>V, S, M</td>
+                    <td class="tl">Concentration. Bless 3 creatures for 1 minute. They add +1d4 to Attack rolls and Saving Throws.</td>
+                </tr>
+                <tr>
+                    <td class="nb">☐</td>
+                    <td>1</td>
+                    <td class="tl"><b>Detect Good and Evil</b></td>
                     <td>Action</td>
                     <td>Self</td>
                     <td>V, S</td>
-                    <td class="tl">15 ft cone. 3d6 fire damage. DEX save DC 13 for half damage. Set unattended items alight.</td>
+                    <td class="tl">Concentration. Detect any Aberration, Celestial, Elemental, Fey, Fiend, or Undead within 30 ft for 10 minutes.</td>
                 </tr>
                 <tr>
-                    <td class="nb">◯</td>
                     <td class="nb">☐</td>
                     <td>1</td>
-                    <td class="tl"><b>Sleep</b></td>
-                    <td>Action</td>
-                    <td>60 ft</td>
-                    <td>V, S, M</td>
-                    <td class="tl">5 ft radius sphere. WIS save DC 13 or be Incapacitated (can not take actions, but can move), then repeat save next turn or be Unconscious.</td>
-                </tr>
-                <tr>
-                    <td class="nb">◯</td>
-                    <td class="nb">☐</td>
-                    <td>1</td>
-                    <td class="tl"><b>Mage Armor</b></td>
-                    <td>Action</td>
-                    <td>Touch</td>
-                    <td>V, S, M</td>
-                    <td class="tl">Last 8 hours. Target who isn't wearing armour gets AC 13 + DEX mod.</td>
-                </tr>
-                <tr>
-                    <td class="nb">◯</td>
-                    <td class="nb">☐</td>
-                    <td>1</td>
-                    <td class="tl"><b>Magic Missile</b></td>
+                    <td class="tl"><b>Guiding Bolt</b></td>
                     <td>Action</td>
                     <td>120 ft</td>
                     <td>V, S</td>
-                    <td class="tl">Creates three darts that automatically hit for 1D4+1 force damage each.</td>
+                    <td class="tl">Ranged spell attack +5 for 4D6 radiant damage. If you hit the next attack roll has Advantage.</td>
                 </tr>
                 <tr>
-                    <td class="nb">◯</td>
                     <td class="nb">☐</td>
                     <td>1</td>
-                    <td class="tl">Charm Person</td>
+                    <td class="tl"><b>Healing Word</b></td>
+                    <td>Bonus Action</td>
+                    <td>60 ft</td>
+                    <td>V</td>
+                    <td class="tl">Heal 2D4+3 (WIS mod) hit points.</td>
+                </tr>
+                <tr>
+                    <td class="nb">☐</td>
+                    <td>1</td>
+                    <td class="tl">Command</td>
+                    <td>Action</td>
+                    <td>60 ft</td>
+                    <td>V</td>
+                    <td class="tl">WIS save DC 13 or must spend their turn following your command: Approach, Drop, Flee, Grovel, Halt.</td>
+                </tr>
+                <tr>
+                    <td class="nb">☐</td>
+                    <td>1</td>
+                    <td class="tl">Create or Destroy Water</td>
                     <td>Action</td>
                     <td>30 ft</td>
-                    <td>V, S</td>
-                    <td class="tl">WIS save DC 13 (advantage if fighting) or Charmed. Lasts 1 hour. When the spell ends they know they were charmed.</td>
-                </tr>
-                <tr>
-                    <td class="nb">◯</td>
-                    <td class="nb">☐</td>
-                    <td>1</td>
-                    <td class="tl">Feather Fall</td>
-                    <td>Reaction</td>
-                    <td>60 ft</td>
-                    <td>V, M</td>
-                    <td class="tl">Up to 5 falling creatures slow descent to 60 ft per round. Lasts 1 minute.</td>
-                </tr>
-                <tr>
-                    <td class="nb">◯</td>
-                    <td class="nb">☐</td>
-                    <td>1</td>
-                    <td class="tl">Grease</td>
-                    <td>Action</td>
-                    <td>60 ft</td>
                     <td>V, S, M</td>
-                    <td class="tl">10 ft square of non-flamable grease. Must make DEX save DC 13 or fall Prone. Must save again if enter or end turn there.</td>
+                    <td class="tl">Create or destroy 10 gallons of water in an open container. Or rain in 30 ft cube (puts out fire), or destroy 30 ft cube of fog.</td>
                 </tr>
                 <tr>
-                    <td class="nb">◯</td>
                     <td class="nb">☐</td>
                     <td>1</td>
-                    <td class="tl">Jump</td>
-                    <td>Bonus Action</td>
+                    <td class="tl">Cure Wounds</td>
+                    <td>Action</td>
                     <td>Touch</td>
-                    <td>V, S, M</td>
-                    <td class="tl">Lasts 1 minute. Target can jump 30 ft by spending 10 ft of movement.</td>
-                </tr>
-                <tr>
-                    <td class="nb">◯</td>
-                    <td class="nb">☐</td>
-                    <td>1</td>
-                    <td class="tl">Silent Image</td>
-                    <td>Action</td>
-                    <td>60 ft</td>
-                    <td>V, S, M</td>
-                    <td class="tl">Concentration. 15 ft cube. As an action move to any spot within range.</td>
-                </tr>
-                <tr>
-                    <td class="nb">◯</td>
-                    <td class="nb">☐</td>
-                    <td>1</td>
-                    <td class="tl">Thunderwave</td>
-                    <td>Action</td>
-                    <td>Self</td>
                     <td>V, S</td>
-                    <td class="tl">15 ft cube. 2d8 thunder damage and push 10 ft. CON save DC 13 for half damage and no push. Can be heard 300 ft away.</td>
-                </tr>
-                <tr class="ch-table-section">
-                    <td colspan="8">Rituals</td>
+                    <td class="tl">Heal 2D8+3 (WIS mod) hit points.</td>
                 </tr>
                 <tr>
-                    <td class="nb">◯</td>
                     <td class="nb">☐</td>
                     <td>1</td>
-                    <td class="tl"><b>Detect Magic</b></td>
+                    <td class="tl">Detect Magic</td>
                     <td>Action</td>
                     <td>Self</td>
                     <td>V, S</td>
                     <td class="tl">Ritual. Concentration. Detect magic within 30 ft for 10 minutes.</td>
                 </tr>
                 <tr>
-                    <td class="nb">◯</td>
                     <td class="nb">☐</td>
                     <td>1</td>
-                    <td class="tl"><b>Comprehend Languages</b></td>
+                    <td class="tl">Protection from Evil and Good</td>
                     <td>Action</td>
-                    <td>Self</td>
+                    <td>Touch</td>
                     <td>V, S, M</td>
-                    <td class="tl">Ritual. Lasts 1 hour. Understand any spoken (or signed) language, or writing you touch.</td>
+                    <td class="tl">Concentration. Protect against Aberrations, Celestials, Elementals, Fey, Fiends, and Undead for 10 minutes. Have Disadvantage on attacks and can't Charm, Frighten, or possess.</td>
                 </tr>
                 <tr>
-                    <td class="nb">◯</td>
                     <td class="nb">☐</td>
                     <td>1</td>
-                    <td class="tl">Alarm</td>
-                    <td>1 Minute</td>
-                    <td>30 ft</td>
-                    <td>V, S, M</td>
-                    <td class="tl">Ritual. 20 ft cube area. Lasts 8 hours. Alarm (choose audible or mental) when a foreign creature touches the area.</td>
+                    <td class="tl">Purify Food and Drink</td>
+                    <td>Action</td>
+                    <td>10 ft</td>
+                    <td>V, S</td>
+                    <td class="tl">Ritual. Remove poison and rot from non-magical good and drink in 5 ft radius sphere.</td>
                 </tr>
                 <tr>
-                    <td class="nb">◯</td>
                     <td class="nb">☐</td>
                     <td>1</td>
-                    <td class="tl">Unseen Servant</td>
-                    <td>Action</td>
+                    <td class="tl">Shield of Faith</td>
+                    <td>Bonus Action</td>
                     <td>60 ft</td>
                     <td>V, S, M</td>
-                    <td class="tl">Ritual. Lasts 1 hour. Conjures and invisible, mindless, Medium force. Bonus Action to command it to perform simple tasks (fetching, mending, cleaning, etc). Can't attack. Can't go beyond range.</td>
+                    <td class="tl">Concentration. Target has +2 AC for 10 minutes.</td>
                 </tr>
             </table>
         </div>

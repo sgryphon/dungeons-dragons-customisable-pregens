@@ -1,27 +1,27 @@
 @font-face {
     font-family: "Fira Sans";
-    src: url("fonts/FiraSans-Regular.ttf");
+    src: url("../fonts/FiraSans-Regular.ttf");
     font-weight: normal; /* 400 */
 }
 @font-face {
     font-family: "Fira Sans";
-    src: url("fonts/FiraSans-Italic.ttf");
+    src: url("../fonts/FiraSans-Italic.ttf");
     font-weight: normal; /* 400 */
     font-style: italic;
 }
 @font-face {
     font-family: "Fira Sans";
-    src: url("fonts/FiraSans-Light.ttf");
+    src: url("../fonts/FiraSans-Light.ttf");
     font-weight: 200;
 }
 @font-face {
     font-family: "Medieval Sharp";
-    src: url("fonts/MedievalSharp-Regular.ttf");
+    src: url("../fonts/MedievalSharp-Regular.ttf");
     font-weight: normal;
 }
 @font-face {
     font-family: "Shadows Into Light";
-    src: url("fonts/ShadowsIntoLight-Regular.ttf");
+    src: url("../fonts/ShadowsIntoLight-Regular.ttf");
 }
 body {
     font-family: "Fira Sans";

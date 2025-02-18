@@ -1,0 +1,442 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles-dnd.css" />
+        <style>
+            body {
+                font-family: "Fira Sans";
+                font-size: 70%;
+            }
+
+            .page-1-grid {
+                display: grid;
+                gap: 0.5rem;
+                grid-template-columns: 30% 70%
+            }
+
+            .block {
+                border: 2px solid black;
+                border-radius: 0.5rem;
+                padding: 0.5rem;
+            }
+            .block h2 {
+                border-bottom: 1px solid black;
+                font-size: 1em;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            .label {
+                font-size: 0.8em;
+                text-transform: uppercase;
+                border-top: 1px solid oklch(50% 0 0);
+            }
+            .value {
+                font-family: "Shadows Into Light";
+                font-size: 1.0rem;
+                color: oklch(50% 0.4 240)
+            }
+
+            .page-1-header {
+                display: flex;
+                gap: 0.5rem;
+                grid-column: 1 / 3;
+                grid-row: 1;
+                justify-content: space-between;
+            }
+            .page-1-header .character {
+                display: grid;
+                column-gap: 0.5rem;
+            }
+            .page-1-header .character .character-name {
+                grid-column: 1 / 3;
+            }
+
+            .page-1-tag {
+                grid-column: 1 / 3;
+                grid-row: 2;
+            }
+
+            .page-1-right {
+                display: grid;
+                gap: 0.5rem;
+                grid-column: 2;
+                grid-row: 3;
+                grid-template-rows: 4rem 1fr 1fr 1fr;
+            }
+            .page-1-right .weapons {
+                grid-column: 1 / 5;
+                grid-row: 2;
+            }
+            .page-1-right .class-features {
+                grid-column: 1 / 5;
+                grid-row: 3;
+            }
+            .page-1-right .species-traits {
+                grid-column: 1 / 3;
+                grid-row: 4;
+            }
+            .page-1-right .feats {
+                grid-column: 3 / 5;
+                grid-row: 4;
+            }
+
+            .page-1-left {
+                display: grid;
+                gap: 0.5rem;
+                grid-column: 1;
+                grid-row: 3;
+            }
+            .page-1-left .abilities-1, .page-1-left .abilities-2 {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                justify-content: space-between;
+            }
+            .page-1-left .training {
+                grid-column: 1 / 3;
+                grid-row: 2;
+            }
+
+            .license-footer {
+                margin-top: 0.5rem;
+            }
+
+            .text-center {
+                text-align: center;
+            }
+            
+            /* default spacing 1 = 0.25rem */
+            .gap-0 {
+                gap: 0;
+            }
+            .gap-x-0 {
+                column-gap: 0;
+            }
+            .gap-y-0 {
+                row-gap: 0;
+            }
+            .gap-1 {
+                gap: 0.25rem;
+            }
+            .gap-x-1 {
+                column-gap: 0.25rem;
+            }
+            .gap-y-1 {
+                row-gap: 0.25rem;
+            }
+            .gap-2 {
+                gap: 0.5rem;
+            }
+
+            .grid {
+                display: grid;
+            }
+            .grid-cols-2 {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            .grid-cols-3 {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+            .grid-cols-x-skill {
+                grid-template-columns: 1rem 1rem 1fr;
+            }
+
+            .items-baseline {
+                align-items: baseline;
+            }
+            .items-end {
+                align-items: flex-end;
+            }
+
+            .flex {
+                display: flex;
+            }
+            .flex-row {
+                flex-direction: row;
+            }
+            .flex-col {
+                flex-direction: column;
+            }
+
+            .x-modifier {
+                font-size: 2em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="page-1-grid">
+            <div class="page-1-header">
+                <div class="block character">
+                    <div class="form-field character-name">
+                        <div class="value">&nbsp;</div>
+                        <div class="label">Character Name</div>
+                    </div>
+                    <div class="form-field">
+                        <div class="value">Criminal</div>
+                        <div class="label">Background</div>
+                    </div>
+                    <div class="form-field">
+                        <div class="value">Rogue</div>
+                        <div class="label">Class</div>
+                    </div>
+                    <div class="form-field">
+                        <div class="value">Halfling</div>
+                        <div class="label">Species</div>
+                    </div>
+                    <div class="form-field">
+                        <div class="value">&nbsp;</div>
+                        <div class="label">Subclass</div>
+                    </div>
+                </div>
+                <div class="block level">
+                    <div class="form-field text-center">
+                        <div class="value">1</div>
+                        <div class="label">Level</div>
+                    </div>
+                    <div class="form-field">
+                        <div class="value">&nbsp;</div>
+                        <div class="label">XP</div>
+                    </div>
+
+                </div>
+                <div class="block armor">
+
+                </div>
+                <div class="block health">
+
+                </div>
+            </div>
+            <div class="page-1-tag">
+                Dungeons & Dragons
+            </div>
+            <div class="page-1-left">
+                <div class="abilities-1">
+                    <div class="block proficiency-bonus">
+                        <h2>Proficiency Bonus</h2>
+                        <div class="value text-center x-modifier">+2</div>
+                    </div>
+                    <div class="block ability-score">
+                        <h2>Strength</h2>
+                        <div class="grid grid-cols-2 gap-2 text-center items-end">
+                            <div class="form-field">
+                                <div class="value x-modifier">-1</div>
+                                <div class="label">Modifier</div>
+                            </div>
+                            <div class="form-field">
+                                <div class="value">8</div>
+                                <div class="label">Score</div>
+                            </div>        
+                        </div>
+                    </div>
+                    <div class="block ability-score">
+                        <h2>Dexterity</h2>
+                        <div class="grid grid-cols-2 gap-2 text-center items-end">
+                            <div class="form-field">
+                                <div class="value x-modifier">+3</div>
+                                <div class="label">Modifier</div>
+                            </div>
+                            <div class="form-field">
+                                <div class="value">17</div>
+                                <div class="label">Score</div>
+                            </div>        
+                        </div>
+                    </div>
+                    <div class="block ability-score">
+                        <h2>Constitution</h2>
+                        <div class="grid grid-cols-2 gap-2 text-center items-end">
+                            <div class="form-field">
+                                <div class="value x-modifier">+1</div>
+                                <div class="label">Modifier</div>
+                            </div>
+                            <div class="form-field">
+                                <div class="value">12</div>
+                                <div class="label">Score</div>
+                            </div>        
+                        </div>
+                    </div>
+                    <div class="block ability-score">
+                        <h2>Intelligence</h2>
+                        <div class="grid grid-cols-2 gap-2 text-center items-end">
+                            <div class="form-field">
+                                <div class="value x-modifier">+2</div>
+                                <div class="label">Modifier</div>
+                            </div>
+                            <div class="form-field">
+                                <div class="value">14</div>
+                                <div class="label">Score</div>
+                            </div>        
+                        </div>
+                    </div>
+                    <div class="block ability-score">
+                        <h2>Wisdom</h2>
+                        <div class="grid grid-cols-2 gap-2 text-center items-end">
+                            <div class="form-field">
+                                <div class="value x-modifier">+0</div>
+                                <div class="label">Modifier</div>
+                            </div>
+                            <div class="form-field">
+                                <div class="value">10</div>
+                                <div class="label">Score</div>
+                            </div>        
+                        </div>
+                    </div>
+                    <div class="block ability-score">
+                        <h2>Charisma</h2>
+                        <div class="grid grid-cols-2 gap-2 text-center items-end">
+                            <div class="form-field">
+                                <div class="value x-modifier">+2</div>
+                                <div class="label">Modifier</div>
+                            </div>
+                            <div class="form-field">
+                                <div class="value">14</div>
+                                <div class="label">Score</div>
+                            </div>        
+                        </div>
+                    </div>
+                    <div class="block heroic-inspiration">
+                        <h2>Heroic Inspiration</h2>
+                        <div class="value text-center">&nbsp;</div>
+                    </div>
+                </div>
+                <div class="abilities-2">
+                    <div class="block saves">
+                        <h2>Saving Throws</h2>
+                        <div class="grid grid-cols-x-skill gap-x-1 items-baseline">
+                            <div>◯</div>
+                            <div class="value">-1</div>
+                            <div>Strength</div>
+                            <div>⚫</div>
+                            <div class="value">+5</div>
+                            <div>Dexterity</div>
+                            <div>◯</div>
+                            <div class="value">+1</div>
+                            <div>Constitution</div>
+                            <div>⚫</div>
+                            <div class="value">+4</div>
+                            <div>Intelligence</div>
+                            <div>◯</div>
+                            <div class="value">+0</div>
+                            <div>Wisdom</div>
+                            <div>◯</div>
+                            <div class="value">+2</div>
+                            <div>Charisma</div>
+                        </div>
+                    </div>
+                    <div class="block skills">
+                        <h2>Strength</h2>
+                        <div class="grid grid-cols-x-skill gap-x-1 items-baseline">
+                            <div>⚫</div>
+                            <div class="value">+5</div>
+                            <div>Acrobatics (Dex)</div>
+                            <div>◯</div>
+                            <div class="value">+0</div>
+                            <div>Animal Handling (Wis)</div>
+                            <div>◯</div>
+                            <div class="value">+2</div>
+                            <div>Arcana (Int)</div>
+                            <div>◯</div>
+                            <div class="value">-1</div>
+                            <div>Athletics (Str)</div>
+                            <div>⚫</div>
+                            <div class="value">+4</div>
+                            <div>Deception (Cha)</div>
+                            <div>◯</div>
+                            <div class="value">+2</div>
+                            <div>History (Int)</div>
+                            <div>◯</div>
+                            <div class="value">+0</div>
+                            <div>Insight (Wis)</div>
+                            <div>◯</div>
+                            <div class="value">+2</div>
+                            <div>Intimidation (Cha)</div>
+                            <div>⚫</div>
+                            <div class="value">+4</div>
+                            <div>Investigation (Int)</div>
+                            <div>◯</div>
+                            <div class="value">+0</div>
+                            <div>Medicine (Wis)</div>
+                            <div>◯</div>
+                            <div class="value">+2</div>
+                            <div>Nature (Int)</div>
+                            <div>⚫</div>
+                            <div class="value">+4</div>
+                            <div><u>Perception (Wis)</u></div>
+                            <div>◯</div>
+                            <div class="value">+2</div>
+                            <div>Performance (Cha)</div>
+                            <div>◯</div>
+                            <div class="value">+2</div>
+                            <div>Persuasion (Cha)</div>
+                            <div>◯</div>
+                            <div class="value">+2</div>
+                            <div>Religion (Int)</div>
+                            <div>⚫</div>
+                            <div class="value">+5</div>
+                            <div>Sleight of Hand (Dex)</div>
+                            <div>⚫</div>
+                            <div class="value">+7</div>
+                            <div><u>Stealth (Dex)</u></div>
+                            <div>◯</div>
+                            <div class="value">+0</div>
+                            <div>Survival (Wis)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block training">
+                    <h2>Equipment Training & Proficiencies</h2>
+                </div>
+            </div>
+            <div class="page-1-right">
+                <div class="block initiative">
+                    <h2>Initiative</h2>
+                    <div class="value text-center x-modifier">+5</div>
+                </div>
+                <div class="block speed">
+                    <h2>Speed</h2>
+                    <div class="value text-center x-modifier">30 ft</div>
+                </div>
+                <div class="block size">
+                    <h2>Size</h2>
+                    <div class="value text-center x-modifier">S</div>
+                </div>
+                <div class="block passive-perception">
+                    <h2>Passive Perception</h2>
+                    <div class="value text-center x-modifier">14</div>
+                </div>
+                <div class="block weapons">
+                    <h2>Weapon & Damage Cantrips</h2>
+                </div>
+                <div class="block class-features">
+                    <h2>Class Features</h2>
+                </div>
+                <div class="block species-traits">
+                    <h2>Species Traits</h2>
+                    <div class="">
+                        <p><b>Brave.</b> Advantage on saves to avoid or end Frightened.</p>
+                        <p><b>Luck.</b> When you roll a 1 on a D20 Test, you can reroll.</p>
+                        <p><b>Naturally Stealthy.</b> You can take the Hide action when you are obscured by a creature at least one size larger.</p>
+                    </div>
+                </div>
+                <div class="block feats">
+                    <h2>Feats</h2>
+                    <div class="">
+                        <p><b>Alert.</b></p>
+                        <p><i>Initiative proficiency:</i> Add +2 to initiative (included).</p>
+                        <p><i>Initiative swap:</i> Immediately after rolling initiative, you can swap initiative with one willing ally.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="license-footer licence-web licence-print">
+            <p class="cc-logo"><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img
+                  alt="Creative Commons License" style="border-width:0"
+                  src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a></p>
+            <p>© Sly Gryphon, version 2025.01.02. This work is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International
+                License</a>. Original sheets from <a href="https://github.com/sgryphon/dungeons-dragons-customisable-pregens/">https://github.com/sgryphon/dungeons-dragons-customisable-pregens/</a></p>
+            </p>
+        </div>
+
+    </body>
+</html>

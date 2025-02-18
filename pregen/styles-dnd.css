@@ -1,0 +1,248 @@
+@font-face {
+    font-family: "Fira Sans";
+    src: url("../fonts/FiraSans-Regular.ttf");
+    font-weight: normal; /* 400 */
+}
+@font-face {
+    font-family: "Fira Sans";
+    src: url("../fonts/FiraSans-Italic.ttf");
+    font-weight: normal; /* 400 */
+    font-style: italic;
+}
+@font-face {
+    font-family: "Fira Sans";
+    src: url("../fonts/FiraSans-Light.ttf");
+    font-weight: 200;
+}
+@font-face {
+    font-family: "Medieval Sharp";
+    src: url("../fonts/MedievalSharp-Regular.ttf");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Shadows Into Light";
+    src: url("../fonts/ShadowsIntoLight-Regular.ttf");
+}
+body {
+    font-family: "Fira Sans";
+    font-size: 0.7rem;
+}
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+.w-4 {
+    width: 1rem;
+}     
+.w-8 {
+    width: 2rem;
+}
+.w-16 {
+    width: 4rem;
+}
+.w-24 {
+    width: 6rem;
+}
+.w-3-5 {
+    width: 60%;
+}
+.w-4-5 {
+    width: 80%;
+}
+.flex {
+    display: flex;
+}
+.bb {
+    border-bottom: solid 1px rgb(0, 0, 0);
+}
+.select-section h3 {
+    font-weight: normal;
+    font-size: 0.7rem;
+    text-decoration: underline;
+}
+.traits {
+    width: 16rem;
+}
+.description, .ability-scores, .saves, .skills, .proficiencies, .features, .equipment,
+.spellcasting, .cantrips, .spellbook, .lineage {
+    margin-bottom: 0.5rem;
+}
+.ch-table {
+    border-collapse: separate;
+    border-spacing: 0.5rem 0;
+    width: 100%;
+}
+.ch-table th {
+    margin-left: 0.5rem;
+    font-size: 0.6rem;
+    text-decoration: underline;
+    color: rgb(153, 153, 153);
+}
+.ability-scores th, .saves th {
+    font-size: 0.7rem;
+    font-weight: normal;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.ch-table td {
+    border-bottom: solid 1px rgb(201, 201, 201);
+    margin-left: 0.5rem;
+    text-align: center;
+    font-size: 0.7rem;
+}
+.ch-table .tl {
+    text-align: left;
+    padding-left: 0.5rem;
+}
+.ch-table td.nb {
+    border-bottom: solid 1px rgb(255, 255, 255);
+}
+.ch-section {
+    border: solid 2px rgb(153, 153, 153);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    position: relative;
+}
+/* .ch-section .ch-section-title {
+    position: absolute;
+    top: -1rem;
+    left: 0.5rem;
+    padding: 0 0.5rem;
+    background: rgb(255, 255, 255);
+} */
+.ch-section-title {
+    text-align: center;
+    padding-bottom: 0.2em;
+    margin-bottom: 0.2em;
+    margin-top: -0.3em;
+    border-bottom: solid 1px rgb(0, 0, 0)
+}
+.ch-section-title h2, .ch-section-title h3 {
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+.ch-table-section td {
+    color: rgb(0, 0, 0);
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: solid 1px rgb(0, 0, 0);
+    padding-top: 0.5rem;
+}
+.ch-section .instruct {
+    color: rgb(153, 153, 153);
+    font-style: italic;
+}
+.alignment, .personality {
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.alignment p {
+    margin-bottom: 0;
+}
+.dt {
+    font-weight: bold;
+    font-style: italic;
+}
+.alignment li {
+    display: flex;
+}           
+.alignment-category {
+    font-style: italic;
+    margin-left: auto;
+}
+.alignment p, .personality p, .proficiencies p, .features p, .equipment p {
+    margin-top: 0.3rem;
+}
+.bg-lt-grey {
+    background-color: rgb(238, 238, 238)
+}
+h1 {
+    text-align: right;
+    font-family: "Medieval Sharp";
+    font-weight: normal;
+}
+
+.px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.pb-0 {
+    padding-bottom: 0;
+}
+.pb-1 {
+    padding-bottom: 0.25rem;
+}
+.pt-2 {
+    padding-top: 0.5rem;
+}
+.mt-1 {
+    margin-top: 0.25rem;
+}
+.mt-2 {
+    margin-top: 0.5rem;
+}
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+.mr-2 {
+    margin-right: 0.5rem;
+}
+.mr-4 {
+    margin-right: 1rem;
+}
+
+.page2-header {
+    text-align: right;
+    font-family: "Medieval Sharp";
+    font-weight: normal;
+}
+
+.license-footer {
+    font-size: 0.6rem;
+}
+
+.licence-print {
+    display: none;
+}
+
+.licence-web {
+    display: block;
+}
+
+@media print {
+    @page {
+        size: A4;
+    }
+
+    .page2-header {
+        page-break-before: always;
+    }
+
+    .license-footer {
+        display: block;
+        margin-top: 2em;
+    }
+
+    .license-footer .cc-logo {
+        float: left;
+        margin-top: 0;
+        margin-right: 1em;
+        margin-bottom: 1em;
+    }
+
+    .licence-web {
+        display: none;
+    }
+    
+    .licence-print {
+        display: block;
+    }
+}

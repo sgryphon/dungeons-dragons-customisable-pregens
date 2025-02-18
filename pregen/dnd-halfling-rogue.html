@@ -1,0 +1,226 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles-dnd.css" />
+        <style>
+            body {
+                font-family: "Fira Sans";
+                font-size: 70%;
+            }
+
+            .page-1-grid {
+                display: grid;
+                gap: 0.5rem;
+                grid-template-columns: 30% 70%
+            }
+
+            .block {
+                border: 2px solid black;
+                border-radius: 0.5rem;
+                padding: 0.5rem;
+            }
+            .block h2 {
+                border-bottom: 1px solid black;
+                font-size: 1em;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            .form-field .label {
+                font-size: 0.8em;
+                text-transform: uppercase;
+                border-top: 1px solid oklch(50% 0 0);
+            }
+            .form-field .value {
+                font-family: "Shadows Into Light";
+                font-size: 1.0rem;
+            }
+
+            .page-1-header {
+                display: flex;
+                gap: 0.5rem;
+                grid-column: 1 / 3;
+                grid-row: 1;
+                justify-content: space-between;
+            }
+            .page-1-header .character {
+                display: grid;
+                column-gap: 0.5rem;
+            }
+            .page-1-header .character .character-name {
+                grid-column: 1 / 3;
+            }
+
+            .page-1-tag {
+                grid-column: 1 / 3;
+                grid-row: 2;
+            }
+
+            .page-1-right {
+                display: grid;
+                gap: 0.5rem;
+                grid-column: 2;
+                grid-row: 3;
+            }
+            .page-1-right .weapons {
+                grid-column: 1 / 5;
+                grid-row: 2;
+            }
+            .page-1-right .class-features {
+                grid-column: 1 / 5;
+                grid-row: 3;
+            }
+            .page-1-right .species-traits {
+                grid-column: 1 / 3;
+                grid-row: 4;
+            }
+            .page-1-right .feats {
+                grid-column: 3 / 5;
+                grid-row: 4;
+            }
+
+            .page-1-left {
+                display: grid;
+                gap: 0.5rem;
+                grid-column: 1;
+                grid-row: 3;
+            }
+            .page-1-left .abilities-1, .page-1-left .abilities-2 {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                justify-content: space-between;
+            }
+            .page-1-left .training {
+                grid-column: 1 / 3;
+                grid-row: 2;
+            }
+
+            .license-footer {
+                margin-top: 0.5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="page-1-grid">
+            <div class="page-1-header">
+                <div class="block character">
+                    <div class="form-field character-name">
+                        <div class="value">&nbsp;</div>
+                        <div class="label">Character Name</div>
+                    </div>
+                    <div class="form-field">
+                        <div class="value">&nbsp;</div>
+                        <div class="label">Background</div>
+                    </div>
+                    <div class="form-field">
+                        <div class="value">Rogue</div>
+                        <div class="label">Class</div>
+                    </div>
+                    <div class="form-field">
+                        <div class="value">Halfling</div>
+                        <div class="label">Species</div>
+                    </div>
+                    <div class="form-field">
+                        <div class="value">&nbsp;</div>
+                        <div class="label">Subclass</div>
+                    </div>
+                </div>
+                <div class="block level">
+                    <div class="form-field">
+                        <div class="value">1</div>
+                        <div class="label">Level</div>
+                    </div>
+                    <div class="form-field">
+                        <div class="value">&nbsp;</div>
+                        <div class="label">XP</div>
+                    </div>
+
+                </div>
+                <div class="block armor">
+
+                </div>
+                <div class="block health">
+
+                </div>
+            </div>
+            <div class="page-1-tag">
+                Dungeons & Dragons
+            </div>
+            <div class="page-1-left">
+                <div class="abilities-1">
+                    <div class="block proficiency-bonus">
+                        <h2>Proficiency Bonus</h2>
+                        <p>+2</p>
+                    </div>
+                    <div class="block ability-score">
+                        <h2>Strength</h2>
+                    </div>
+                    <div class="block ability-score">
+                        <h2>Dexterity</h2>
+                    </div>
+                    <div class="block ability-score">
+                        <h2>Constitution</h2>
+                    </div>
+                    <div class="block heroic-inspiration">
+                        <h2>Heroic Inspiration</h2>
+                    </div>
+                </div>
+                <div class="abilities-2">
+                    <div class="block ability-score">
+                        <h2>Intelligence</h2>
+                    </div>
+                    <div class="block ability-score">
+                        <h2>Wisdom</h2>
+                    </div>
+                    <div class="block ability-score">
+                        <h2>Charisma</h2>
+                    </div>
+                </div>
+                <div class="block training">
+                    <h2>Equipment Training & Proficiencies</h2>
+                </div>
+            </div>
+            <div class="page-1-right">
+                <div class="block initiative">
+                    <h2>Initiative</h2>
+                    <p>+0</p>
+                </div>
+                <div class="block speed">
+                    <h2>Speed</h2>
+                    <p>30 ft</p>
+                </div>
+                <div class="block size">
+                    <h2>Size</h2>
+                    <p>S</p>
+                </div>
+                <div class="block passive-perception">
+                    <h2>Passive Perception</h2>
+                    <p>10</p>
+                </div>
+                <div class="block weapons">
+                    <h2>Weapon & Damage Cantrips</h2>
+                </div>
+                <div class="block class-features">
+                    <h2>Class Features</h2>
+                </div>
+                <div class="block species-traits">
+                    <h2>Species Traits</h2>
+                </div>
+                <div class="block feats">
+                    <h2>Feats</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="license-footer licence-web licence-print">
+            <p class="cc-logo"><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img
+                  alt="Creative Commons License" style="border-width:0"
+                  src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a></p>
+            <p>© Sly Gryphon, version 2025.01.02. This work is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International
+                License</a>. Original sheets from <a href="https://github.com/sgryphon/dungeons-dragons-customisable-pregens/">https://github.com/sgryphon/dungeons-dragons-customisable-pregens/</a></p>
+            </p>
+        </div>
+
+    </body>
+</html>
